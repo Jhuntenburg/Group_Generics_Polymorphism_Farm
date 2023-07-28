@@ -30,8 +30,21 @@ public class FroilandaTests {
         Assert.assertTrue(Froilanda instanceof Animal);
     }
 
+
+
     @Test
-    public void flysTest() {
+    public void flysTest(){
+        Froilanda froilanda = new Froilanda();
+        CropDuster cropduster = new CropDuster();
+
+        froilanda.mount(cropduster);
+        froilanda.flys(cropduster);
+
+        Assert.assertTrue(cropduster.getMounted(froilanda));
+    }
+
+    @Test
+    public void mountTest() {
         Froilanda froilanda = new Froilanda();
         CropDuster cropduster = new CropDuster();
 
