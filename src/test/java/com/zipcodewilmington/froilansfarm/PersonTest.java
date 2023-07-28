@@ -8,4 +8,8 @@ public class PersonTest {
     public void instanceOfAnimal(){
         Assert.assertTrue(Person instanceof Animal);
     }
+    @Test
+    public void instanceOfNoiseMaker(){
+        Assert.assertTrue(Person instanceof NoiseMaker);
+    }
 }
