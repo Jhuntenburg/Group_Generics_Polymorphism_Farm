@@ -6,67 +6,69 @@ import org.junit.Test;
 public class FroilandaTests {
 
     @Test
-    public void instanceOfRiderTest(){
+    public void instanceOfRiderTest() {
         Assert.assertTrue(Froilanda instanceof Rider);
     }
 
     @Test
-    public void instanceOfEaterTest(){
+    public void instanceOfEaterTest() {
         Assert.assertTrue(Froilanda instanceof Eater);
     }
 
     @Test
-    public void instanceOfPilot(){
+    public void instanceOfPilot() {
         Assert.assertTrue(Froilanda instanceof Pilot);
     }
 
     @Test
-    public void instanceOfPerson(){
+    public void instanceOfPerson() {
         Assert.assertTrue(Froilanda instanceof Person);
     }
+
     @Test
-    public void instanceOfAnimal(){
+    public void instanceOfAnimal() {
         Assert.assertTrue(Froilanda instanceof Animal);
     }
 
     @Test
-    public void flysTest(){
-        Froilanda froilanda = new Froilanda;
-        Cropduster cropduster = new Cropduster;
+    public void flysTest() {
+        Froilanda froilanda = new Froilanda();
+        Cropduster cropduster = new Cropduster();
 
         String expected = "froilanda";
         String actual = cropduster.getoperator().getName();
 
-        Assert.assertEquals(expected,actual);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void feedTest(){
-        Froilanda froilanda = new Froilanda;
-        Chicken chicken1 = new Chicken;
-        Earcorn earcorn = new EarCorn;
+    public void feedTest() {
+        Froilanda froilanda = new Froilanda();
+        Chicken chicken1 = new Chicken();
+        Earcorn earcorn = new EarCorn();
 
-      froilanda.feed(chicken1, earcorn);
+        froilanda.feed(chicken1, earcorn);
 
-      Assert.assertTrue(chicken1.eat(earcorn));
+        Assert.assertTrue(chicken1.eat(earcorn));
 
     }
+
     @Test
-    public void speakTest(){
-        Froilanda froilanda = new Froilanda;
+    public void speakTest() {
+        Froilanda froilanda = new Froilanda();
 
         String expected = "Look out below!";
         String actual = this.speak();
 
-        Assert.assertEquals(expected,actual);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void eatTest(){
-        Froilanda froilanda = new Froilanda;
-        Earcorn earcorn = new EarCorn;
-        Tomato tomato1 = new Tomato;
-        Tomato tomato2 = new Tomato;
+    public void eatTest() {
+        Froilanda froilanda = new Froilanda();
+        Earcorn earcorn = new EarCorn();
+        Tomato tomato1 = new Tomato();
+        Tomato tomato2 = new Tomato();
         Egg egg1 = new Egg;
         Egg egg2 = new Egg;
 
@@ -78,9 +80,6 @@ public class FroilandaTests {
 
         Assert.assertTrue(froilanda.isFed());
     }
-
-
-
 
 
 }

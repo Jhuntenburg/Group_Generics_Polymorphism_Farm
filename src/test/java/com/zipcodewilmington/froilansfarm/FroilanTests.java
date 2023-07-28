@@ -46,7 +46,7 @@ public class FroilanTests {
     }
     @Test
     public void speakTest(){
-        Froilan froilan = new Froilan;
+        Froilan froilan = new Froilan();
 
         String expected = "Where's my Eggs!";
         String actual = this.speak();
@@ -55,10 +55,10 @@ public class FroilanTests {
     }
     @Test
     public void eatTest(){
-        Froilan froilan = new Froilaa;
-        Earcorn earcorn = new EarCorn;
-        Earcorn earcorn2 = new EarCorn;
-        Tomato tomato1 = new Tomato;
+        Froilan froilan = new Froilan();
+        EarCorn earcorn = new EarCorn();
+        EarCorn earcorn2 = new EarCorn();
+        Tomato tomato1 = new Tomato();
         Egg egg1 = new Egg;
         Egg egg2 = new Egg;
         Egg egg3 = new Egg;
@@ -77,6 +77,16 @@ public class FroilanTests {
 
         Assert.assertTrue(froilan.isFed());
     }
+
+    @Test
+    public void plantsTest(){
+        Froilan froilan = new Froilan();
+        CropRow row1 = new CropRow();
+
+
+
+    }
+
 
 
 
