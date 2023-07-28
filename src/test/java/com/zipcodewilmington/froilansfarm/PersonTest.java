@@ -11,5 +11,6 @@ public class PersonTest {
     @Test
     public void instanceOfNoiseMaker(){
         Assert.assertTrue(Person instanceof NoiseMaker);
+        
     }
 }
