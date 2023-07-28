@@ -18,7 +18,18 @@ public class EggTest {
         //When people eat (under Eater)
         f.eat(egg);
 
-        Assert.assertTrue(egg.gotEaten());
+        Assert.assertTrue(egg.gotEaten);
+
+    }
+
+    public void eggSetEatenStat(){
+        //we make egg its false that its not eata bc just born
+        Egg egg = new Egg();
+
+        //when setting true, checking if its been eaten
+        egg.setEatenStatus();
+
+        Assert.assertTrue(egg.gotEaten);
 
     }
 
