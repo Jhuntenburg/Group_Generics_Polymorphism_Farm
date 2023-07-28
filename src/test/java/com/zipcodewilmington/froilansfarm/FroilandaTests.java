@@ -33,8 +33,9 @@ public class FroilandaTests {
     @Test
     public void flysTest() {
         Froilanda froilanda = new Froilanda();
-        Cropduster cropduster = new Cropduster();
+        CropDuster cropduster = new CropDuster();
 
+        froilanda.mount(cropduster);
         String expected = "froilanda";
         String actual = cropduster.getoperator().getName();
 

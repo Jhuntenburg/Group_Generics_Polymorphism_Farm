@@ -90,6 +90,32 @@ public class FroilanTests {
 
     }
 
+    @Test
+    public void mountTest(){
+        Froilan froilan = new Froilan();
+        Tractor tractor = new Tractor();
+
+        froilan.mount(tractor);
+        String expected = "Froilan";
+        String actual = tractor.operator.getName();
+
+        Assert.assertEquals(expected, actual);
+
+
+    }
+    @Test
+    public void dismountTest(){
+        Froilan froilan = new Froilan();
+        Tractor tractor = new Tractor();
+
+        froilan.mount(tractor);
+        String expected = tractor.operator.getName();
+        froilan.dismount(tractor);
+        String actual = tractor.operator.getName();
+
+        Assert.assertNotEquals(expected, actual);
+    }
+
 
 
 
