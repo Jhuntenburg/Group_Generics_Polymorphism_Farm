@@ -83,7 +83,10 @@ public class FroilanTests {
         Froilan froilan = new Froilan();
         CropRow row1 = new CropRow();
 
+        froilan.plants(row1, CornStalk);
 
+
+        Assert.assertTrue(row1.contains(CornStalk));
 
     }
 
