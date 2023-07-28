@@ -3,7 +3,7 @@ package com.zipcodewilmington.froilansfarm;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class FieldTest {
+public class FarmFieldTest {
 
     @Test
     public void instanceOfStorageUnitTest(){
