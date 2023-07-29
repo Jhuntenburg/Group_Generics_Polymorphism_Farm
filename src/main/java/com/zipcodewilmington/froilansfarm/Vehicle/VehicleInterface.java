@@ -2,7 +2,7 @@ package com.zipcodewilmington.froilansfarm.Vehicle;
 
 public interface VehicleInterface {
 
-    public default void turnOnEngine() {}
+    public void turnOnEngine();
 
-    public default void turnOffEngine() {}
+    public void turnOffEngine();
 }
