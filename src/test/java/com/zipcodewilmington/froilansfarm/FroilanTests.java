@@ -45,7 +45,7 @@ public class FroilanTests {
 
     }
     @Test
-    public void speakTest(){
+    public void makeNoise(){
         Froilan froilan = new Froilan();
 
         String expected = "Where's my Eggs!";

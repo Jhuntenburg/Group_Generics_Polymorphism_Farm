@@ -1,4 +1,4 @@
-package Persons;
+package com.zipcodewilmington.froilansfarm.Persons;
 
 import com.zipcodewilmington.froilansfarm.StorageUnits.CropRows;
 import com.zipcodewilmington.froilansfarm.StorageUnits.Pantry;
@@ -28,20 +28,23 @@ public class Froilan extends Person implements Botanist, Farmer, Rider{
         animal.eat(edible);
 
 
+
     }
 
     @Override
     public void mount(Rideable rideable) {
-
+        rideable.getMounted(this);
     }
 
     @Override
     public void dismount(Rideable rideable) {
+        rideable.getMounted(null);
 
     }
 
     @Override
     public void makeNoise() {
+        System.out.println("Where's my Eggs!");
 
     }
 }
