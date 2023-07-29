@@ -20,6 +20,7 @@ public abstract class Vehicle implements VehicleInterface{
     public boolean getEngineIsOn() {
         return engineIsOn;
     }
+    public boolean getEngineStatus() {return getEngineIsOn();}
 
     public void turnOnEngine() {
         this.engineIsOn = true;
