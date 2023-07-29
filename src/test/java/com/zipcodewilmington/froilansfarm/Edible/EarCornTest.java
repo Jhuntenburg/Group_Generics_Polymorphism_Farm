@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Edible;
 
+import Edible.EarCorn;
+import Edible.Vegetable;
 import org.junit.Assert;
 import org.junit.Test;
 
