@@ -45,11 +45,11 @@ public class FroilanTests {
 
     }
     @Test
-    public void makeNoise(){
+    public void makeNoiseTest(){
         Froilan froilan = new Froilan();
 
         String expected = "Where's my Eggs!";
-        String actual = this.speak();
+        String actual = this.makeNoise();
 
         Assert.assertEquals(expected,actual);
     }
