@@ -21,5 +21,13 @@ public class Tractor extends Vehicle implements FarmVehicle{
     }
 
 
+    @Override
+    public void makeNoise() {
 
+    }
+
+    @Override
+    public void operateOnFarm() {
+
+    }
 }
