@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
+import Persons.Person;
+
 public class Tractor extends Vehicle implements FarmVehicle{
 
 
@@ -19,6 +21,11 @@ public class Tractor extends Vehicle implements FarmVehicle{
         //Maybe return an array?
         //Clone then empty?
     }
+
+    public Person getOperator() {
+        return this.operator;
+    }
+
 
 
     @Override

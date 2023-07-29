@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
+import Persons.Froilan;
+import Persons.Person;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -40,11 +42,11 @@ public class VehicleTest {
     @Test
     public void vehicleOperatorConstructorTest() {
         //Given
-        Person farmerDan = new Person();
-        Tractor tractor = new Tractor(farmerDan);
+        Person dan = new Froilan("Dan");
+        Tractor tractor = new Tractor(dan);
 
         //When
-        Person expectedPerson = farmerDan;
+        Person expectedPerson = dan;
         Person actualPerson = tractor.getOperator();
 
 
