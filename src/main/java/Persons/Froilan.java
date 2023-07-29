@@ -25,6 +25,7 @@ public class Froilan extends Person implements Botanist, Farmer, Rider{
 
     @Override
     public void feed(Animal animal, Edible edible) {
+        animal.eat(edible);
 
 
     }
@@ -36,6 +37,11 @@ public class Froilan extends Person implements Botanist, Farmer, Rider{
 
     @Override
     public void dismount(Rideable rideable) {
+
+    }
+
+    @Override
+    public void makeNoise() {
 
     }
 }

@@ -1,5 +1,7 @@
 package Persons;
 
+import com.zipcodewilmington.froilansfarm.NoiseMaker;
+
 public abstract class Animal implements Eater<Food extends Edible>, NoiseMaker {
     public static Boolean isFed;
    private String name;
