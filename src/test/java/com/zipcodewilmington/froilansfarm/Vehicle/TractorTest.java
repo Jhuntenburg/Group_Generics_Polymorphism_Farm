@@ -39,7 +39,7 @@ public class TractorTest {
         Tractor tractor = new Tractor();
 
         //When
-        tractor.getMounted(person);
+        tractor.getMounted(froilan);
 
         //Then
         Assert.assertTrue(tractor.getOperator() != null);
@@ -48,13 +48,13 @@ public class TractorTest {
     @Test
     public void tractorGetMountedTest2() {
         //Given
-        Person person = new Person();
+        Person froilan = new Froilan("Froilan");
         Tractor tractor = new Tractor();
-        tractor.getMounted(person);
+        tractor.getMounted(froilan);
 
         //When
-        Person expectedPerson = person;
-        Person actualPerson = tractor.getPerson;
+        Person expectedPerson = froilan;
+        Person actualPerson = tractor.getOperator();
 
         //Then
         Assert.assertEquals(expectedPerson, actualPerson);
