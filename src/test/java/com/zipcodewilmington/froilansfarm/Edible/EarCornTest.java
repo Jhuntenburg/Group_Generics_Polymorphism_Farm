@@ -1,13 +1,17 @@
 package com.zipcodewilmington.froilansfarm.Edible;
 
 import org.junit.Assert;
+import org.junit.Test;
 
 public class EarCornTest {
 
+    @Test
     public void ecInstanceOfVegetable (){
+
         Assert.assertTrue(EarCorn instanceof Vegetable);
     }
 
+    @Test
     public void earCornGotEatenTest(){
         //Given
         EarCorn ec = new EarCorn();
@@ -16,10 +20,11 @@ public class EarCornTest {
         //When people eat (under Eater)
         f.eat(tom);
 
-        Assert.assertTrue(tom.gotEaten());
+        Assert.assertTrue(ec.gotEaten);
 
     }
 
+    @Test
     public void tomSetEatenStat(){
         //we make egg its false that its not eata bc just born
         EarCorn ec = new EarCorn();
