@@ -6,6 +6,7 @@ import org.junit.Test;
 public class TomatoTest {
     @Test
     public void tomInstanceOfVegetable (){
+
         Assert.assertTrue(Tomato instanceof Vegetable);
     }
 

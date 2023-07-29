@@ -7,9 +7,11 @@ public class EggTest {
     @Test
 
     public void instanceOfEdibleTest (){
+
         Assert.assertTrue(Egg instanceof Edible);
     }
 
+    @Test
     public void eggGotEatenTest(){
        //Given
         Egg egg = new Egg();
@@ -22,6 +24,7 @@ public class EggTest {
 
     }
 
+    @Test
     public void eggSetEatenStat(){
         //we make egg its false that its not eata bc just born
         Egg egg = new Egg();

@@ -10,6 +10,7 @@ public class TomatoPlantTest {
 
     @Test
     public void tomPInstanceOfCrop (){
+
         Assert.assertTrue(TomatoPlant instanceof Crop);
     }
 
@@ -17,7 +18,7 @@ public class TomatoPlantTest {
 
 public void tomPlantHarvestTest(){
 
-
+    @Test
     public void tomPlantHarvestTest(){
 
         TomatoPlant tomPlant = new TomatoPlant();
@@ -32,7 +33,7 @@ public void tomPlantHarvestTest(){
         Assert.assertTrue(cropR.get(0).harvested);
 
     }
-
+    @Test
     public void tomPlantFertilizationTest(){
 
         TomatoPlant tomPlant = new TomatoPlant();
