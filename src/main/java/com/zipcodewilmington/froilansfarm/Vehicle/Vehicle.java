@@ -1,10 +1,10 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements VehicleInterface{
     Person operator;
     boolean engineIsOn = false;
 
-
+    public Vehicle() {}
     public Vehicle(Person operator) {
         this.operator = operator;
     }
@@ -17,7 +17,7 @@ public abstract class Vehicle {
         this.operator = operator;
     }
 
-    public boolean isEngineIsOn() {
+    public boolean getEngineIsOn() {
         return engineIsOn;
     }
 
