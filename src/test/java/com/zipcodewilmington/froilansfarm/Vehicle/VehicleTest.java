@@ -53,25 +53,41 @@ public class VehicleTest {
 
     }
     @Test
-    public void Test() {
+    public void vehicleSetOperatorTest1() {
         //Given
+        Person farmerDan = new Person();
+        Person farmerSue = new Person();
+        Tractor tractor = new Tractor(farmerDan);
 
         //When
+        tractor.setOperator(farmerSue);
+
+        Person expectedPerson = farmerSue;
+        Person actualPerson = tractor.getOperator();
 
         //Then
-
+        Assert.assertEquals(expectedPerson, actualPerson);
 
     }
+
     @Test
-    public void Test() {
+    public void vehicleSetOperatorTest2() {
         //Given
+        Person farmerDan = new Person();
+        Person farmerSue = new Person();
+        CropDuster cropDuster = new CropDuster(farmerSue);
 
         //When
+        tractor.setOperator(farmerDan);
+
+        Person expectedPerson = farmerDan;
+        Person actualPerson = tractor.getOperator();
 
         //Then
-
+        Assert.assertEquals(expectedPerson, actualPerson);
 
     }
+
 
 
 }
