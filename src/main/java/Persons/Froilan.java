@@ -1,24 +1,31 @@
 package Persons;
 
 import com.zipcodewilmington.froilansfarm.StorageUnits.CropRows;
+import com.zipcodewilmington.froilansfarm.StorageUnits.Pantry;
 
 public class Froilan extends Person implements Botanist, Farmer, Rider{
+
+    int eatenfood=0;
     public Froilan(String name) {
         super(name);
     }
 
     @Override
     public void plants(CropRows cropRows, Crop crop) {
-        Botanist.super.plants(cropRows, crop);
+
+        cropRows.add(crop);
     }
 
     @Override
-    public void eat() {
-        super.eat();
+    public void eat(Edible edible) {
+        Pantry.remove(edible);
+         eatenfood ++;
+
     }
 
     @Override
     public void feed(Animal animal, Edible edible) {
+
 
     }
 
