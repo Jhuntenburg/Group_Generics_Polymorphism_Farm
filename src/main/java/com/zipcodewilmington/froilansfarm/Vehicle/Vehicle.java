@@ -4,7 +4,7 @@ public abstract class Vehicle {
     Person operator;
     boolean engineIsOn = false;
 
-
+    public Vehicle() {}
     public Vehicle(Person operator) {
         this.operator = operator;
     }
