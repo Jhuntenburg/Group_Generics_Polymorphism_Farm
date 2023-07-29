@@ -1,9 +1,17 @@
 package com.zipcodewilmington.froilansfarm.Edible;
 
 import org.junit.Assert;
+import org.junit.Test;
 
 public class KaleTest {
 
+    @Test
+    public void kInstanceOfVegetable (){
+
+        Assert.assertTrue(Kale instanceof Vegetable);
+    }
+
+    @Test
     public void kaleGotEatenTest(){
         //Given
         Kale kale = new Kale();
@@ -16,6 +24,7 @@ public class KaleTest {
 
     }
 
+    @Test
     public void tomSetEatenStat(){
         //we make egg its false that its not eata bc just born
         Kale kale = new Kale();
