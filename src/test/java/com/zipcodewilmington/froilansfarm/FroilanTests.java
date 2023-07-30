@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
+import com.zipcodewilmington.froilansfarm.Persons.*;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -8,32 +9,38 @@ public class FroilanTests {
 
     @Test
     public void instanceOfRiderTest() {
-        Assert.assertTrue(Froilan instanceof Rider);
+        Froilan froilan = new Froilan();
+        Assert.assertTrue(froilan instanceof Rider);
     }
 
     @Test
     public void instanceOfEaterTest() {
-        Assert.assertTrue(Froilan instanceof Eater);
+        Froilan froilan = new Froilan();
+        Assert.assertTrue(froilan instanceof Eater);
     }
 
     @Test
     public void instanceOfBotanist() {
-        Assert.assertTrue(Froilan instanceof Botanist);
+        Froilan froilan = new Froilan();
+        Assert.assertTrue(froilan instanceof Botanist);
     }
 
     @Test
     public void instanceOfPerson() {
-        Assert.assertTrue(Froilan instanceof Person);
+        Froilan froilan = new Froilan();
+        Assert.assertTrue(froilan instanceof Person);
     }
 
     @Test
     public void instanceOfAnimal() {
-        Assert.assertTrue(Froilan instanceof Animal);
+        Froilan froilan = new Froilan();
+        Assert.assertTrue(froilan instanceof Animal);
     }
 
     @Test
     public void instanceOfFarmer() {
-        Assert.assertTrue(Frailan instanceof Farmer);
+        Froilan froilan = new Froilan();
+        Assert.assertTrue(froilan instanceof Farmer);
     }
 
     @Test

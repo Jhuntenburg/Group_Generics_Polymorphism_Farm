@@ -6,6 +6,10 @@ import com.zipcodewilmington.froilansfarm.StorageUnits.Pantry;
 public class Froilan extends Person implements Botanist, Farmer, Rider{
 
     int eatenfood=0;
+
+    public Froilan(){
+        super();
+    }
     public Froilan(String name) {
         super(name);
     }
