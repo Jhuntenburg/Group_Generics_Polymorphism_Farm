@@ -7,34 +7,37 @@ public class FroilanTests {
 
 
     @Test
-    public void instanceOfRiderTest(){
+    public void instanceOfRiderTest() {
         Assert.assertTrue(Froilan instanceof Rider);
     }
 
     @Test
-    public void instanceOfEaterTest(){
+    public void instanceOfEaterTest() {
         Assert.assertTrue(Froilan instanceof Eater);
     }
 
     @Test
-    public void instanceOfBotanist(){
+    public void instanceOfBotanist() {
         Assert.assertTrue(Froilan instanceof Botanist);
     }
 
     @Test
-    public void instanceOfPerson(){
+    public void instanceOfPerson() {
         Assert.assertTrue(Froilan instanceof Person);
     }
+
     @Test
-    public void instanceOfAnimal(){
+    public void instanceOfAnimal() {
         Assert.assertTrue(Froilan instanceof Animal);
     }
+
     @Test
-    public void instanceOfFarmer(){
+    public void instanceOfFarmer() {
         Assert.assertTrue(Frailan instanceof Farmer);
     }
+
     @Test
-    public void feedTest(){
+    public void feedTest() {
         Froilan froilan = new Froilan;
         Chicken chicken1 = new Chicken;
         Earcorn earcorn = new EarCorn;
@@ -44,17 +47,19 @@ public class FroilanTests {
         Assert.assertTrue(chicken1.eat(earcorn));
 
     }
+
     @Test
-    public void makeNoiseTest(){
+    public void makeNoiseTest() {
         Froilan froilan = new Froilan();
 
         String expected = "Where's my Eggs!";
         String actual = this.makeNoise();
 
-        Assert.assertEquals(expected,actual);
+        Assert.assertEquals(expected, actual);
     }
+
     @Test
-    public void eatTest(){
+    public void eatTest() {
         Froilan froilan = new Froilan();
         EarCorn earcorn = new EarCorn();
         EarCorn earcorn2 = new EarCorn();
@@ -79,7 +84,7 @@ public class FroilanTests {
     }
 
     @Test
-    public void plantsTest(){
+    public void plantsTest() {
         Froilan froilan = new Froilan();
         CropRow row1 = new CropRow();
 
@@ -91,7 +96,7 @@ public class FroilanTests {
     }
 
     @Test
-    public void mountTest(){
+    public void mountTest() {
         Froilan froilan = new Froilan();
         Tractor tractor = new Tractor();
 
@@ -103,8 +108,9 @@ public class FroilanTests {
 
 
     }
+
     @Test
-    public void dismountTest(){
+    public void dismountTest() {
         Froilan froilan = new Froilan();
         Tractor tractor = new Tractor();
 
@@ -115,10 +121,6 @@ public class FroilanTests {
 
         Assert.assertNotEquals(expected, actual);
     }
-
-
-
-
 
 
 }

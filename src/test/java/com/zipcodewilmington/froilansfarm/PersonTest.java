@@ -5,12 +5,13 @@ import org.junit.Test;
 
 public class PersonTest {
     @Test
-    public void instanceOfAnimal(){
+    public void instanceOfAnimal() {
         Assert.assertTrue(Person instanceof Animal);
     }
+
     @Test
-    public void instanceOfNoiseMaker(){
+    public void instanceOfNoiseMaker() {
         Assert.assertTrue(Person instanceof NoiseMaker);
-        
+
     }
 }
