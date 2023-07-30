@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
-import Persons.Person;
+
+import com.zipcodewilmington.froilansfarm.Persons.Person;
 
 public class Tractor extends Vehicle implements FarmVehicle{
 
@@ -14,7 +15,7 @@ public class Tractor extends Vehicle implements FarmVehicle{
     public Vegetable harvest(Crop cropRow) {
         if (this.engineIsOn) {
             cropRow.get(cropRow.getCrop);
-            retrun Vegetable;
+            return Vegetable;
         }
         System.out.println("The engine is off!");
         return null;
