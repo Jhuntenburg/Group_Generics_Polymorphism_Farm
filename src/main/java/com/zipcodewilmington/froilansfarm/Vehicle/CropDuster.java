@@ -13,6 +13,13 @@ public class CropDuster extends Vehicle implements FarmVehicle, AirCraft {
     }
 
 
+    public void fertalize() {
+
+
+    }
+
+
+
     @Override
     public void makeNoise() {
 
