@@ -68,11 +68,11 @@ public class FroilandaTests {
     }
 
     @Test
-    public void speakTest() {
+    public void makeNoiseTest() {
         Froilanda froilanda = new Froilanda();
 
         String expected = "Look out below!";
-        String actual = this.speak();
+        String actual = this.makeNoise();
 
         Assert.assertEquals(expected, actual);
     }

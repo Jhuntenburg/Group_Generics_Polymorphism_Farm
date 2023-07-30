@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
-public class CropDuster extends Vehicle implements FarmVehicle {
+import Persons.Person;
+
+public class CropDuster extends Vehicle implements FarmVehicle, AirCraft {
 
 
     public CropDuster(){super();}
@@ -9,4 +11,19 @@ public class CropDuster extends Vehicle implements FarmVehicle {
         super(operator);
     }
 
+
+    @Override
+    public void makeNoise() {
+
+    }
+
+    @Override
+    public void fly() {
+
+    }
+
+    @Override
+    public void operateOnFarm() {
+
+    }
 }

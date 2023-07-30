@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
+import Persons.Froilan;
+import Persons.Person;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -40,11 +42,11 @@ public class VehicleTest {
     @Test
     public void vehicleOperatorConstructorTest() {
         //Given
-        Person farmerDan = new Person();
-        Tractor tractor = new Tractor(farmerDan);
+        Person dan = new Froilan("Dan");
+        Tractor tractor = new Tractor(dan);
 
         //When
-        Person expectedPerson = farmerDan;
+        Person expectedPerson = dan;
         Person actualPerson = tractor.getOperator();
 
 
@@ -55,14 +57,14 @@ public class VehicleTest {
     @Test
     public void vehicleSetOperatorTest1() {
         //Given
-        Person farmerDan = new Person();
-        Person farmerSue = new Person();
-        Tractor tractor = new Tractor(farmerDan);
+        Person dan = new Froilan("Dan");
+        Person sue = new Froilan("Sue");
+        Tractor tractor = new Tractor(dan);
 
         //When
-        tractor.setOperator(farmerSue);
+        tractor.setOperator(sue);
 
-        Person expectedPerson = farmerSue;
+        Person expectedPerson = sue;
         Person actualPerson = tractor.getOperator();
 
         //Then
@@ -73,15 +75,15 @@ public class VehicleTest {
     @Test
     public void vehicleSetOperatorTest2() {
         //Given
-        Person farmerDan = new Person();
-        Person farmerSue = new Person();
-        CropDuster cropDuster = new CropDuster(farmerSue);
+        Person dan = new Froilan("Dan");
+        Person sue = new Froilan("Sue");
+        CropDuster cropDuster = new CropDuster(sue);
 
         //When
-        tractor.setOperator(farmerDan);
+        cropDuster.setOperator(dan);
 
-        Person expectedPerson = farmerDan;
-        Person actualPerson = tractor.getOperator();
+        Person expectedPerson = dan;
+        Person actualPerson = cropDuster.getOperator();
 
         //Then
         Assert.assertEquals(expectedPerson, actualPerson);
