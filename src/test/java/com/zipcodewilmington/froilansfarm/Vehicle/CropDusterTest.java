@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
+import Persons.Person;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
+import Persons.Person;
+
 public class CropDuster extends Vehicle implements FarmVehicle, AirCraft {
 
 
@@ -10,5 +12,18 @@ public class CropDuster extends Vehicle implements FarmVehicle, AirCraft {
     }
 
 
+    @Override
+    public void makeNoise() {
 
+    }
+
+    @Override
+    public void fly() {
+
+    }
+
+    @Override
+    public void operateOnFarm() {
+
+    }
 }

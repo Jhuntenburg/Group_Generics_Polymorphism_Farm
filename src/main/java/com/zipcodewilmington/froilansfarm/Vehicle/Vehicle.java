@@ -1,8 +1,9 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
+import Persons.Person;
 import com.zipcodewilmington.froilansfarm.NoiseMaker;
 
-public abstract class Vehicle implements VehicleInterface, NoiseMaker {
+public abstract class Vehicle <AnyType extends Person>implements VehicleInterface, NoiseMaker {
     Person operator;
     boolean engineIsOn = false;
 

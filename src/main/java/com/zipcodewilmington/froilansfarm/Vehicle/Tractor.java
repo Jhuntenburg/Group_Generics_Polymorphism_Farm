@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
+import Persons.Person;
+
 public class Tractor extends Vehicle implements FarmVehicle{
 
 
@@ -20,6 +22,19 @@ public class Tractor extends Vehicle implements FarmVehicle{
         //Clone then empty?
     }
 
+    public Person getOperator() {
+        return this.operator;
+    }
 
 
+
+    @Override
+    public void makeNoise() {
+
+    }
+
+    @Override
+    public void operateOnFarm() {
+
+    }
 }
