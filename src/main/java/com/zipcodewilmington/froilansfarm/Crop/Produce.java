@@ -1,4 +1,12 @@
 package com.zipcodewilmington.froilansfarm.Crop;
 
-public interface Produce {
+import Edible.Edible;
+
+public interface Produce <AnyType extends Edible> {
+    public void yeild();
+
+    public void hasBeenHarvested();
+
+
+
 }
