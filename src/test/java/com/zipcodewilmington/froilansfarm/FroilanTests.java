@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.Persons.*;
+import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -60,7 +61,7 @@ public class FroilanTests {
         Froilan froilan = new Froilan();
 
         String expected = "Where's my Eggs!";
-        String actual = this.makeNoise();
+        String actual = froilan.makeNoise();
 
         Assert.assertEquals(expected, actual);
     }
@@ -122,9 +123,9 @@ public class FroilanTests {
         Tractor tractor = new Tractor();
 
         froilan.mount(tractor);
-        String expected = tractor.operator.getName();
+        Person expected = tractor.getOperator();
         froilan.dismount(tractor);
-        String actual = tractor.operator.getName();
+        Person actual = tractor.getOperator();
 
         Assert.assertNotEquals(expected, actual);
     }

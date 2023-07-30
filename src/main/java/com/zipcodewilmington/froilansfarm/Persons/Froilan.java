@@ -8,7 +8,7 @@ public class Froilan extends Person implements Botanist, Farmer, Rider{
     int eatenfood=0;
 
     public Froilan(){
-        super();
+
     }
     public Froilan(String name) {
         super(name);
@@ -47,8 +47,9 @@ public class Froilan extends Person implements Botanist, Farmer, Rider{
     }
 
     @Override
-    public void makeNoise() {
+    public String makeNoise() {
         System.out.println("Where's my Eggs!");
+        return "Where's my Eggs!";
 
     }
 }

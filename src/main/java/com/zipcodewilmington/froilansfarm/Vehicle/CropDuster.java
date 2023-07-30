@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
-import Persons.Person;
+
+import com.zipcodewilmington.froilansfarm.Persons.Person;
 
 public class CropDuster extends Vehicle implements FarmVehicle, AirCraft {
 

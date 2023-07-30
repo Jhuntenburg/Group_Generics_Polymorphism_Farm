@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
+import com.zipcodewilmington.froilansfarm.Persons.*;
+import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -7,27 +9,36 @@ public class FroilandaTests {
 
     @Test
     public void instanceOfRiderTest() {
-        Assert.assertTrue(Froilanda instanceof Rider);
+        Froilanda froilanda = new Froilanda();
+
+        Assert.assertTrue(froilanda instanceof Rider);
     }
 
     @Test
     public void instanceOfEaterTest() {
-        Assert.assertTrue(Froilanda instanceof Eater);
+        Froilanda froilanda = new Froilanda();
+
+        Assert.assertTrue(froilanda instanceof Eater);
     }
 
     @Test
     public void instanceOfPilot() {
-        Assert.assertTrue(Froilanda instanceof Pilot);
+        Froilanda froilanda = new Froilanda();
+
+        Assert.assertTrue(froilanda instanceof Pilot);
     }
 
     @Test
     public void instanceOfPerson() {
-        Assert.assertTrue(Froilanda instanceof Person);
+        Froilanda froilanda = new Froilanda();
+
+        Assert.assertTrue(froilanda instanceof Person);
     }
 
     @Test
     public void instanceOfAnimal() {
-        Assert.assertTrue(Froilanda instanceof Animal);
+        Froilanda froilanda = new Froilanda();
+        Assert.assertTrue(froilanda instanceof Animal);
     }
 
 
@@ -48,8 +59,8 @@ public class FroilandaTests {
         CropDuster cropduster = new CropDuster();
 
         froilanda.mount(cropduster);
-        String expected = "froilanda";
-        String actual = cropduster.getoperator().getName();
+        Person expected = froilanda;
+        Person actual = cropduster.getOperator();
 
         Assert.assertEquals(expected, actual);
     }
@@ -71,7 +82,7 @@ public class FroilandaTests {
         Froilanda froilanda = new Froilanda();
 
         String expected = "Look out below!";
-        String actual = this.makeNoise();
+        String actual = froilanda.makeNoise();
 
         Assert.assertEquals(expected, actual);
     }
