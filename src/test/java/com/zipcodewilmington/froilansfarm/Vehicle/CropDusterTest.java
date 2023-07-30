@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
-import Persons.Person;
+
+import com.zipcodewilmington.froilansfarm.Persons.Froilan;
+import com.zipcodewilmington.froilansfarm.Persons.Person;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -33,11 +35,11 @@ public class CropDusterTest {
     @Test
     public void cropDusterGetMountedTest1() {
         //Given
-        Person person = new Person();
+        Froilan dan = new Froilan("Dan");
         CropDuster cropDuster = new CropDuster();
 
         //When
-        cropDuster.getMounted(person);
+        cropDuster.getMounted(dan);
 
         //Then
         Assert.assertTrue(tractor.getPerson != null);
@@ -48,12 +50,12 @@ public class CropDusterTest {
     @Test
     public void cropDusterGetMountedTest2() {
         //Given
-        Person person = new Person();
+        Froilan sam = new Froilan("Sam");
         CropDuster cropDuster = new CropDuster();
 
         //When
-        Person expectedPerson = person;
-        Person actualPerson = cropDuster.getPerson;
+        Person expectedPerson = sam;
+        Person actualPerson = cropDuster.getOperator();
 
         //Then
         Assert.assertEquals(expectedPerson, actualPerson);
