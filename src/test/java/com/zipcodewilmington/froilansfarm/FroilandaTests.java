@@ -31,9 +31,8 @@ public class FroilandaTests {
     }
 
 
-
     @Test
-    public void flysTest(){
+    public void flysTest() {
         Froilanda froilanda = new Froilanda();
         CropDuster cropduster = new CropDuster();
 

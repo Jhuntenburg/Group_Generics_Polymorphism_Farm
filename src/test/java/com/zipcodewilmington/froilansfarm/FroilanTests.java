@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
+import com.zipcodewilmington.froilansfarm.Persons.*;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -7,34 +8,43 @@ public class FroilanTests {
 
 
     @Test
-    public void instanceOfRiderTest(){
-        Assert.assertTrue(Froilan instanceof Rider);
+    public void instanceOfRiderTest() {
+        Froilan froilan = new Froilan();
+        Assert.assertTrue(froilan instanceof Rider);
     }
 
     @Test
-    public void instanceOfEaterTest(){
-        Assert.assertTrue(Froilan instanceof Eater);
+    public void instanceOfEaterTest() {
+        Froilan froilan = new Froilan();
+        Assert.assertTrue(froilan instanceof Eater);
     }
 
     @Test
-    public void instanceOfBotanist(){
-        Assert.assertTrue(Froilan instanceof Botanist);
+    public void instanceOfBotanist() {
+        Froilan froilan = new Froilan();
+        Assert.assertTrue(froilan instanceof Botanist);
     }
 
     @Test
-    public void instanceOfPerson(){
-        Assert.assertTrue(Froilan instanceof Person);
+    public void instanceOfPerson() {
+        Froilan froilan = new Froilan();
+        Assert.assertTrue(froilan instanceof Person);
     }
+
     @Test
-    public void instanceOfAnimal(){
-        Assert.assertTrue(Froilan instanceof Animal);
+    public void instanceOfAnimal() {
+        Froilan froilan = new Froilan();
+        Assert.assertTrue(froilan instanceof Animal);
     }
+
     @Test
-    public void instanceOfFarmer(){
-        Assert.assertTrue(Frailan instanceof Farmer);
+    public void instanceOfFarmer() {
+        Froilan froilan = new Froilan();
+        Assert.assertTrue(froilan instanceof Farmer);
     }
+
     @Test
-    public void feedTest(){
+    public void feedTest() {
         Froilan froilan = new Froilan;
         Chicken chicken1 = new Chicken;
         Earcorn earcorn = new EarCorn;
@@ -44,17 +54,19 @@ public class FroilanTests {
         Assert.assertTrue(chicken1.eat(earcorn));
 
     }
+
     @Test
-    public void makeNoise(){
+    public void makeNoiseTest() {
         Froilan froilan = new Froilan();
 
         String expected = "Where's my Eggs!";
-        String actual = this.speak();
+        String actual = this.makeNoise();
 
-        Assert.assertEquals(expected,actual);
+        Assert.assertEquals(expected, actual);
     }
+
     @Test
-    public void eatTest(){
+    public void eatTest() {
         Froilan froilan = new Froilan();
         EarCorn earcorn = new EarCorn();
         EarCorn earcorn2 = new EarCorn();
@@ -79,7 +91,7 @@ public class FroilanTests {
     }
 
     @Test
-    public void plantsTest(){
+    public void plantsTest() {
         Froilan froilan = new Froilan();
         CropRow row1 = new CropRow();
 
@@ -91,7 +103,7 @@ public class FroilanTests {
     }
 
     @Test
-    public void mountTest(){
+    public void mountTest() {
         Froilan froilan = new Froilan();
         Tractor tractor = new Tractor();
 
@@ -103,8 +115,9 @@ public class FroilanTests {
 
 
     }
+
     @Test
-    public void dismountTest(){
+    public void dismountTest() {
         Froilan froilan = new Froilan();
         Tractor tractor = new Tractor();
 
@@ -115,10 +128,6 @@ public class FroilanTests {
 
         Assert.assertNotEquals(expected, actual);
     }
-
-
-
-
 
 
 }

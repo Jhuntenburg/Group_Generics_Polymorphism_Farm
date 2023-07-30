@@ -10,6 +10,11 @@ public abstract class Animal implements Eater<Food extends Edible>, NoiseMaker {
         this.name = name;
 
     }
+
+    public Animal() {
+
+    }
+
     public String getName() {
         return name;
     }
