@@ -51,8 +51,8 @@ public class FroilanTests {
 
     @Test
     public void feedTest() {
-        Froilan froilan = new Froilan;
-        Chicken chicken1 = new Chicken;
+        Froilan froilan = new Froilan();
+        Chicken chicken1 = new Chicken();
         EarCorn earcorn = new EarCorn();
 
         froilan.feed(chicken1, earcorn);
@@ -114,8 +114,8 @@ public class FroilanTests {
         Tractor tractor = new Tractor();
 
         froilan.mount(tractor);
-        String expected = "Froilan";
-        String actual = tractor.operator.getName();
+        Rider expected = froilan;
+        Rider actual = tractor.getOperator();
 
         Assert.assertEquals(expected, actual);
 
@@ -128,9 +128,9 @@ public class FroilanTests {
         Tractor tractor = new Tractor();
 
         froilan.mount(tractor);
-        Person expected = tractor.getOperator();
+        Rider expected = tractor.getOperator();
         froilan.dismount(tractor);
-        Person actual = tractor.getOperator();
+        Rider actual = tractor.getOperator();
 
         Assert.assertNotEquals(expected, actual);
     }
