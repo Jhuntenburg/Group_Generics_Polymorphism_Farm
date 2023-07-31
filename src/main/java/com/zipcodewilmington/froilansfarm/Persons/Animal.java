@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Persons;
 
+import Edible.Edible;
 import com.zipcodewilmington.froilansfarm.NoiseMaker;
 
 public abstract class Animal implements Eater<Edible>, NoiseMaker {
