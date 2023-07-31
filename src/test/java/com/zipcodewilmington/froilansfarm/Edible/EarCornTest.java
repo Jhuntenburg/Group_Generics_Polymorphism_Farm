@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm.Edible;
 
 import Edible.EarCorn;
 import Edible.Vegetable;
+import com.zipcodewilmington.froilansfarm.Persons.Froilan;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -20,7 +21,7 @@ public class EarCornTest {
         Froilan f= new Froilan();
 
         //When people eat (under Eater)
-        f.eat(tom);
+        f.eat(ec);
 
         Assert.assertTrue(ec.gotEaten);
 
