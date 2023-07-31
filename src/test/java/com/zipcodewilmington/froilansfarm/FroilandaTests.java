@@ -1,5 +1,8 @@
 package com.zipcodewilmington.froilansfarm;
 
+import Edible.EarCorn;
+import Edible.Egg;
+import Edible.Tomato;
 import com.zipcodewilmington.froilansfarm.Persons.*;
 import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 import org.junit.Assert;
@@ -69,7 +72,7 @@ public class FroilandaTests {
     public void feedTest() {
         Froilanda froilanda = new Froilanda();
         Chicken chicken1 = new Chicken();
-        Earcorn earcorn = new EarCorn();
+        EarCorn earcorn = new EarCorn();
 
         froilanda.feed(chicken1, earcorn);
 
@@ -90,11 +93,11 @@ public class FroilandaTests {
     @Test
     public void eatTest() {
         Froilanda froilanda = new Froilanda();
-        Earcorn earcorn = new EarCorn();
+        EarCorn earcorn = new EarCorn();
         Tomato tomato1 = new Tomato();
         Tomato tomato2 = new Tomato();
-        Egg egg1 = new Egg;
-        Egg egg2 = new Egg;
+        Egg egg1 = new Egg();
+        Egg egg2 = new Egg();
 
         froilanda.eat(earcorn);
         froilanda.eat(tomato1);
