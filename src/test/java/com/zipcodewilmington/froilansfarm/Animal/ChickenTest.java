@@ -31,14 +31,14 @@ public class ChickenTest {
     }
 
     @Test
-    public void yield() {
+    public <EdibleEgg> void yield() {
         chicken.setHasBeenFertilized(false);
         EdibleEgg actual = chicken.yield();
         Assert.assertNotNull(actual);
     }
 
     @Test
-    public void yield2() {
+    public <EdibleEgg> void yield2() {
         chicken.setHasBeenFertilized(true);
         EdibleEgg actual = chicken.yield();
         Assert.assertNull(actual);
