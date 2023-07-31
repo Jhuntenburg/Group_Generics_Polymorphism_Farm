@@ -10,7 +10,7 @@ public class CropDuster extends Vehicle implements Rideable, FarmVehicle, AirCra
 
     public CropDuster(){super();}
 
-    public CropDuster(Person operator) {
+    public CropDuster(Rider operator) {
         super(operator);
     }
 
