@@ -1,7 +1,7 @@
 package Edible;
 
 public class Egg implements Edible{
-    boolean gotEaten = false;
+    public boolean gotEaten = false;
 
 
     public void setEatenStatus() {

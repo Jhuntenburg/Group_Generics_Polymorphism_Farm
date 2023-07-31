@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm.Edible;
 
 import Edible.Kale;
 import Edible.Vegetable;
+import com.zipcodewilmington.froilansfarm.Persons.Froilan;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -9,8 +10,9 @@ public class KaleTest {
 
     @Test
     public void kInstanceOfVegetable (){
+        Kale kale = new Kale();
 
-        Assert.assertTrue(Kale instanceof Vegetable);
+        Assert.assertTrue(kale instanceof Vegetable);
     }
 
     @Test
@@ -22,7 +24,7 @@ public class KaleTest {
         //When people eat (under Eater)
         f.eat(kale);
 
-        Assert.assertTrue(kale.gotEaten());
+        Assert.assertTrue(kale.gotEaten);
 
     }
 

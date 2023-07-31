@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Crop;
 
+import com.zipcodewilmington.froilansfarm.Persons.Froilan;
+import com.zipcodewilmington.froilansfarm.Persons.Froilanda;
 import com.zipcodewilmington.froilansfarm.StorageUnits.CropRows;
 import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
@@ -9,7 +11,7 @@ import org.junit.Test;
 public class CornStalkTest {
 
     @Test
-    public void tomPlantHarvestTest(){
+    public void cornPlantHarvestTest(){
 
         CornStalk cStalk = new CornStalk();
         Froilan f= new Froilan();
@@ -25,7 +27,7 @@ public class CornStalkTest {
     }
 
     @Test
-    public void tomPlantFertilizationTest(){
+    public void cornPlantFertilizationTest(){
 
         CornStalk cStalk = new CornStalk();
         Froilanda landa= new Froilanda();
@@ -35,7 +37,7 @@ public class CornStalkTest {
 
         cdust.getMounted(landa);
         cropR.add(cStalk);
-        cdust.fertilizer(cropR);
+        cdust.fertilize(cropR);
 
 
         Assert.assertTrue(cropR.get(0).fertilized);

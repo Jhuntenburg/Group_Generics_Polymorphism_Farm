@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm.Edible;
 
 import Edible.Edible;
 import Edible.Egg;
+import com.zipcodewilmington.froilansfarm.Persons.Froilan;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -9,8 +10,8 @@ public class EggTest {
     @Test
 
     public void instanceOfEdibleTest (){
-
-        Assert.assertTrue(Egg instanceof Edible);
+        Egg egg = new Egg();
+        Assert.assertTrue(egg instanceof Edible);
     }
 
     @Test
@@ -28,7 +29,7 @@ public class EggTest {
 
     @Test
     public void eggSetEatenStat(){
-        //we make egg its false that its not eata bc just born
+
         Egg egg = new Egg();
 
         //when setting true, checking if its been eaten

@@ -2,14 +2,15 @@ package com.zipcodewilmington.froilansfarm.Edible;
 
 import Edible.Tomato;
 import Edible.Vegetable;
+import com.zipcodewilmington.froilansfarm.Persons.Froilan;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class TomatoTest {
     @Test
     public void tomInstanceOfVegetable (){
-
-        Assert.assertTrue(Tomato instanceof Vegetable);
+        Tomato tom = new Tomato();
+        Assert.assertTrue(tom instanceof Vegetable);
     }
 
     @Test
