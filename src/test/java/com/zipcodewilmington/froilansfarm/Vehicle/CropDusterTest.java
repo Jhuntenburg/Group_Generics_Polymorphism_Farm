@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm.Vehicle;
 
 import com.zipcodewilmington.froilansfarm.Persons.Froilan;
 import com.zipcodewilmington.froilansfarm.Persons.Person;
+import com.zipcodewilmington.froilansfarm.Persons.Rider;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -54,8 +55,8 @@ public class CropDusterTest {
         CropDuster cropDuster = new CropDuster();
 
         //When
-        Person expectedPerson = sam;
-        Person actualPerson = cropDuster.getOperator();
+        Rider expectedPerson = sam;
+        Rider actualPerson = cropDuster.getOperator();
 
         //Then
         Assert.assertEquals(expectedPerson, actualPerson);

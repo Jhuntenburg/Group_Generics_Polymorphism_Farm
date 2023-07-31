@@ -3,21 +3,23 @@ package com.zipcodewilmington.froilansfarm.Vehicle;
 
 import com.zipcodewilmington.froilansfarm.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.Persons.Person;
+import com.zipcodewilmington.froilansfarm.Persons.Rider;
+import com.zipcodewilmington.froilansfarm.Rideable;
 
-public abstract class Vehicle <AnyType extends Person>implements VehicleInterface, NoiseMaker {
-    Person operator;
+public abstract class Vehicle <AnyType extends Rider>implements VehicleInterface, NoiseMaker, Rideable {
+    AnyType operator;
     boolean engineIsOn = false;
 
     public Vehicle() {}
-    public Vehicle(Person operator) {
+    public Vehicle(AnyType operator) {
         this.operator = operator;
     }
 
-    public Person getOperator() {
+    public AnyType getOperator() {
         return operator;
     }
 
-    public void setOperator(Person operator) {
+    public void setOperator(AnyType operator) {
         this.operator = operator;
     }
 

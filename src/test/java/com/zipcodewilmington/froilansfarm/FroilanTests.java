@@ -1,6 +1,11 @@
 package com.zipcodewilmington.froilansfarm;
 
+import Edible.EarCorn;
+import Edible.Egg;
+import Edible.Tomato;
+import com.zipcodewilmington.froilansfarm.Crop.CornStalk;
 import com.zipcodewilmington.froilansfarm.Persons.*;
+import com.zipcodewilmington.froilansfarm.StorageUnits.CropRows;
 import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
 import org.junit.Assert;
 import org.junit.Test;
@@ -48,7 +53,7 @@ public class FroilanTests {
     public void feedTest() {
         Froilan froilan = new Froilan;
         Chicken chicken1 = new Chicken;
-        Earcorn earcorn = new EarCorn;
+        EarCorn earcorn = new EarCorn();
 
         froilan.feed(chicken1, earcorn);
 
@@ -72,11 +77,11 @@ public class FroilanTests {
         EarCorn earcorn = new EarCorn();
         EarCorn earcorn2 = new EarCorn();
         Tomato tomato1 = new Tomato();
-        Egg egg1 = new Egg;
-        Egg egg2 = new Egg;
-        Egg egg3 = new Egg;
-        Egg egg4 = new Egg;
-        Egg egg5 = new Egg;
+        Egg egg1 = new Egg();
+        Egg egg2 = new Egg();
+        Egg egg3 = new Egg();
+        Egg egg4 = new Egg();
+        Egg egg5 = new Egg();
 
 
         froilan.eat(earcorn);
@@ -94,7 +99,7 @@ public class FroilanTests {
     @Test
     public void plantsTest() {
         Froilan froilan = new Froilan();
-        CropRow row1 = new CropRow();
+        CropRows row1 = new CropRows();
 
         froilan.plants(row1, CornStalk);
 
