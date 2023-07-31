@@ -62,8 +62,8 @@ public class FroilandaTests {
         CropDuster cropduster = new CropDuster();
 
         froilanda.mount(cropduster);
-        Person expected = froilanda;
-        Person actual = cropduster.getOperator();
+        Rider expected = froilanda;
+        Rider actual = cropduster.getOperator();
 
         Assert.assertEquals(expected, actual);
     }
