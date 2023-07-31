@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm.Vehicle;
 
 import com.zipcodewilmington.froilansfarm.Persons.Froilan;
 import com.zipcodewilmington.froilansfarm.Persons.Person;
+import com.zipcodewilmington.froilansfarm.Persons.Rider;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -54,8 +55,8 @@ public class TractorTest {
         tractor.getMounted(froilan);
 
         //When
-        Person expectedPerson = froilan;
-        Person actualPerson = tractor.getOperator();
+        Rider expectedPerson = froilan;
+        Rider actualPerson = tractor.getOperator();
 
         //Then
         Assert.assertEquals(expectedPerson, actualPerson);
