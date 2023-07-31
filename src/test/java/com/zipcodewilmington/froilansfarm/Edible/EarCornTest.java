@@ -29,7 +29,7 @@ public class EarCornTest {
 
     @Test
     public void tomSetEatenStat(){
-        //we make egg its false that its not eata bc just born
+
         EarCorn ec = new EarCorn();
 
         //when setting true, checking if its been eaten
