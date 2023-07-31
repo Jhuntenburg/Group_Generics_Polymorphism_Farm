@@ -1,7 +1,9 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
 
+import Edible.Vegetable;
 import com.zipcodewilmington.froilansfarm.Persons.Person;
+import com.zipcodewilmington.froilansfarm.StorageUnits.CropRows;
 
 public class Tractor extends Vehicle implements FarmVehicle{
 
@@ -12,8 +14,8 @@ public class Tractor extends Vehicle implements FarmVehicle{
         super(operator);
     }
 
-    public Vegetable harvest(Crop cropRow) {
-        if (this.engineIsOn) {
+    public Vegetable harvest(CropRows cropRow) {
+        if (engineIsOn && operator != null) {
             cropRow.get(cropRow.getCrop);
             return Vegetable;
         }
@@ -30,8 +32,8 @@ public class Tractor extends Vehicle implements FarmVehicle{
 
 
     @Override
-    public void makeNoise() {
-
+    public String makeNoise() {
+        return "VROOM";
     }
 
     @Override
