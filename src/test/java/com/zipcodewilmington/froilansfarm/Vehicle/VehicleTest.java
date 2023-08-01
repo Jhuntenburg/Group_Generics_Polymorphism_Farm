@@ -1,7 +1,9 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
-import Persons.Froilan;
-import Persons.Person;
+
+import com.zipcodewilmington.froilansfarm.Persons.Froilan;
+import com.zipcodewilmington.froilansfarm.Persons.Person;
+import com.zipcodewilmington.froilansfarm.Persons.Rider;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -13,8 +15,8 @@ public class VehicleTest {
         CropDuster cropDuster = new CropDuster();
 
         //When
-        Person expectedPerson = null;
-        Person actualPerson = cropDuster.getOperator();
+        Rider expectedPerson = null;
+        Rider actualPerson = cropDuster.getOperator();
         boolean expectedEngineStatus = false;
         boolean actualEngineStatus = cropDuster.getEngineStatus();
 
@@ -29,8 +31,8 @@ public class VehicleTest {
         Tractor tractor = new Tractor();
 
         //When
-        Person expectedPerson = null;
-        Person actualPerson = tractor.getOperator();
+        Rider expectedPerson = null;
+        Rider actualPerson = tractor.getOperator();
         boolean expectedEngineStatus = false;
         boolean actualEngineStatus = tractor.getEngineStatus();
 
@@ -42,12 +44,12 @@ public class VehicleTest {
     @Test
     public void vehicleOperatorConstructorTest() {
         //Given
-        Person dan = new Froilan("Dan");
+        Froilan dan = new Froilan("Dan");
         Tractor tractor = new Tractor(dan);
 
         //When
-        Person expectedPerson = dan;
-        Person actualPerson = tractor.getOperator();
+        Rider expectedPerson = dan;
+        Rider actualPerson = tractor.getOperator();
 
 
         //Then
@@ -57,15 +59,15 @@ public class VehicleTest {
     @Test
     public void vehicleSetOperatorTest1() {
         //Given
-        Person dan = new Froilan("Dan");
-        Person sue = new Froilan("Sue");
+        Froilan dan = new Froilan("Dan");
+        Froilan sue = new Froilan("Sue");
         Tractor tractor = new Tractor(dan);
 
         //When
         tractor.setOperator(sue);
 
-        Person expectedPerson = sue;
-        Person actualPerson = tractor.getOperator();
+        Rider expectedPerson = sue;
+        Rider actualPerson = tractor.getOperator();
 
         //Then
         Assert.assertEquals(expectedPerson, actualPerson);
@@ -75,15 +77,15 @@ public class VehicleTest {
     @Test
     public void vehicleSetOperatorTest2() {
         //Given
-        Person dan = new Froilan("Dan");
-        Person sue = new Froilan("Sue");
+        Froilan dan = new Froilan("Dan");
+        Froilan sue = new Froilan("Sue");
         CropDuster cropDuster = new CropDuster(sue);
 
         //When
         cropDuster.setOperator(dan);
 
         Person expectedPerson = dan;
-        Person actualPerson = cropDuster.getOperator();
+        Rider actualPerson = cropDuster.getOperator();
 
         //Then
         Assert.assertEquals(expectedPerson, actualPerson);

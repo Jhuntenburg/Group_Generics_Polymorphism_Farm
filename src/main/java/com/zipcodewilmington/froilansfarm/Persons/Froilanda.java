@@ -6,14 +6,19 @@ import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 public class Froilanda extends Person implements Rider, Pilot{
     int eatenfood=0;
 
+    public Froilanda(){
+
+    }
+
     public Froilanda(String name) {
         super(name);
     }
 
     @Override
-    public void makeNoise() {
+    public String makeNoise() {
         System.out.println("Look out below!");
 
+        return "Look out below!";
     }
 
     @Override

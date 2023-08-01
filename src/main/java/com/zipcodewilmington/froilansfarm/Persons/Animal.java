@@ -1,8 +1,9 @@
 package com.zipcodewilmington.froilansfarm.Persons;
 
+import Edible.Edible;
 import com.zipcodewilmington.froilansfarm.NoiseMaker;
 
-public abstract class Animal implements Eater<Food extends Edible>, NoiseMaker {
+public abstract class Animal implements Eater<Edible>, NoiseMaker {
     public static Boolean isFed;
    private String name;
 
@@ -10,6 +11,11 @@ public abstract class Animal implements Eater<Food extends Edible>, NoiseMaker {
         this.name = name;
 
     }
+
+    public Animal() {
+
+    }
+
     public String getName() {
         return name;
     }

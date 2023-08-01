@@ -1,20 +1,28 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
-import Persons.Person;
 
-public class CropDuster extends Vehicle implements FarmVehicle, AirCraft {
+import com.zipcodewilmington.froilansfarm.Persons.Person;
+import com.zipcodewilmington.froilansfarm.Persons.Rider;
+import com.zipcodewilmington.froilansfarm.Rideable;
+
+public class CropDuster extends Vehicle implements Rideable, FarmVehicle, AirCraft {
 
 
     public CropDuster(){super();}
 
-    public CropDuster(Person operator) {
+    public CropDuster(Rider operator) {
         super(operator);
     }
 
 
-    @Override
-    public void makeNoise() {
+    public void fertalize() {
 
+    }
+
+
+    @Override
+    public String makeNoise() {
+        return "NYOOOM";
     }
 
     @Override
@@ -25,5 +33,10 @@ public class CropDuster extends Vehicle implements FarmVehicle, AirCraft {
     @Override
     public void operateOnFarm() {
 
+    }
+
+    @Override
+    public void getMounted(Rider rider) {
+        this.operator = rider;
     }
 }

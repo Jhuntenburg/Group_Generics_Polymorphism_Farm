@@ -5,4 +5,7 @@ public abstract class Person extends Animal implements Feeder {
         super(name);
     }
 
+    public Person() {
+        super();
+    }
 }

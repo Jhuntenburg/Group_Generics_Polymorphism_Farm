@@ -1,5 +1,10 @@
 package com.zipcodewilmington.froilansfarm;
 
+import Edible.EarCorn;
+import Edible.Egg;
+import Edible.Tomato;
+import com.zipcodewilmington.froilansfarm.Persons.*;
+import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -7,33 +12,41 @@ public class FroilandaTests {
 
     @Test
     public void instanceOfRiderTest() {
-        Assert.assertTrue(Froilanda instanceof Rider);
+        Froilanda froilanda = new Froilanda();
+
+        Assert.assertTrue(froilanda instanceof Rider);
     }
 
     @Test
     public void instanceOfEaterTest() {
-        Assert.assertTrue(Froilanda instanceof Eater);
+        Froilanda froilanda = new Froilanda();
+
+        Assert.assertTrue(froilanda instanceof Eater);
     }
 
     @Test
     public void instanceOfPilot() {
-        Assert.assertTrue(Froilanda instanceof Pilot);
+        Froilanda froilanda = new Froilanda();
+
+        Assert.assertTrue(froilanda instanceof Pilot);
     }
 
     @Test
     public void instanceOfPerson() {
-        Assert.assertTrue(Froilanda instanceof Person);
+        Froilanda froilanda = new Froilanda();
+
+        Assert.assertTrue(froilanda instanceof Person);
     }
 
     @Test
     public void instanceOfAnimal() {
-        Assert.assertTrue(Froilanda instanceof Animal);
+        Froilanda froilanda = new Froilanda();
+        Assert.assertTrue(froilanda instanceof Animal);
     }
 
 
-
     @Test
-    public void flysTest(){
+    public void flysTest() {
         Froilanda froilanda = new Froilanda();
         CropDuster cropduster = new CropDuster();
 
@@ -49,8 +62,8 @@ public class FroilandaTests {
         CropDuster cropduster = new CropDuster();
 
         froilanda.mount(cropduster);
-        String expected = "froilanda";
-        String actual = cropduster.getoperator().getName();
+        Rider expected = froilanda;
+        Rider actual = cropduster.getOperator();
 
         Assert.assertEquals(expected, actual);
     }
@@ -59,7 +72,7 @@ public class FroilandaTests {
     public void feedTest() {
         Froilanda froilanda = new Froilanda();
         Chicken chicken1 = new Chicken();
-        Earcorn earcorn = new EarCorn();
+        EarCorn earcorn = new EarCorn();
 
         froilanda.feed(chicken1, earcorn);
 
@@ -72,7 +85,7 @@ public class FroilandaTests {
         Froilanda froilanda = new Froilanda();
 
         String expected = "Look out below!";
-        String actual = this.makeNoise();
+        String actual = froilanda.makeNoise();
 
         Assert.assertEquals(expected, actual);
     }
@@ -80,11 +93,11 @@ public class FroilandaTests {
     @Test
     public void eatTest() {
         Froilanda froilanda = new Froilanda();
-        Earcorn earcorn = new EarCorn();
+        EarCorn earcorn = new EarCorn();
         Tomato tomato1 = new Tomato();
         Tomato tomato2 = new Tomato();
-        Egg egg1 = new Egg;
-        Egg egg2 = new Egg;
+        Egg egg1 = new Egg();
+        Egg egg2 = new Egg();
 
         froilanda.eat(earcorn);
         froilanda.eat(tomato1);
