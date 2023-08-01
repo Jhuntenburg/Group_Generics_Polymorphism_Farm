@@ -105,7 +105,7 @@ public class FroilandaTests {
         froilanda.eat(egg1);
         froilanda.eat(egg2);
 
-        Assert.assertTrue(froilanda.isFed());
+        Assert.assertTrue(froilanda.getIsFed());
     }
 
 
