@@ -1,16 +1,15 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
 
-import com.zipcodewilmington.froilansfarm.Persons.Person;
-import com.zipcodewilmington.froilansfarm.Persons.Rider;
+import com.zipcodewilmington.froilansfarm.Persons.Froilanda;
 import com.zipcodewilmington.froilansfarm.Rideable;
 
-public class CropDuster extends Vehicle implements Rideable, FarmVehicle, AirCraft {
+public class CropDuster extends Vehicle<Froilanda> implements Rideable<Froilanda>, FarmVehicle, AirCraft {
 
 
     public CropDuster(){super();}
 
-    public CropDuster(Rider operator) {
+    public CropDuster(Froilanda operator) {
         super(operator);
     }
 
@@ -36,7 +35,7 @@ public class CropDuster extends Vehicle implements Rideable, FarmVehicle, AirCra
     }
 
     @Override
-    public void getMounted(Rider rider) {
+    public void getMounted(Froilanda rider) {
         this.operator = rider;
     }
 }

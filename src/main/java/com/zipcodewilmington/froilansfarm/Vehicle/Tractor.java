@@ -1,8 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
 
-import Edible.Vegetable;
-import com.zipcodewilmington.froilansfarm.Persons.Person;
+import com.zipcodewilmington.froilansfarm.Edible.Vegetable;
 import com.zipcodewilmington.froilansfarm.Persons.Rider;
 import com.zipcodewilmington.froilansfarm.StorageUnits.CropRows;
 
