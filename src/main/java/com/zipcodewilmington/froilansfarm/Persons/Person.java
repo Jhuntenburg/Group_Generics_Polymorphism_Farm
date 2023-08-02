@@ -1,6 +1,9 @@
 package com.zipcodewilmington.froilansfarm.Persons;
 
-public abstract class Person extends Animal implements Feeder, Rider {
+import com.zipcodewilmington.froilansfarm.Edible.Edible;
+import com.zipcodewilmington.froilansfarm.Vehicle.Vehicle;
+
+public abstract class Person extends Animal implements Feeder, Rider<Vehicle> {
     public Person(String name) {
         super(name);
     }
@@ -8,4 +11,6 @@ public abstract class Person extends Animal implements Feeder, Rider {
     public Person() {
         super();
     }
+
+
 }

@@ -37,5 +37,5 @@ public abstract class Vehicle <AnyType extends Rider>implements VehicleInterface
         this.engineIsOn = false;
     }
 
-    public abstract void getMounted(Froilanda rider);
+    public abstract void getMounted(AnyType rider);
 }

@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.StorageUnitTest;
 
+import com.zipcodewilmington.froilansfarm.StorageUnits.StorageUnit;
 import org.junit.Assert;
 import org.junit.Test;
 

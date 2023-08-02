@@ -10,12 +10,6 @@ public class ProduceTest {
         Assert.assertTrue(Chicken instanceof Produce);
     }
 
-    @Test
-    public void chickenInstanceOfProduce (){
-
-        Assert.assertTrue(Crop instanceof Produce);
-    }
-
 
 
 

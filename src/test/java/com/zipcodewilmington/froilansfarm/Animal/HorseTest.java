@@ -16,7 +16,7 @@ public class HorseTest {
     }
 
     @Test
-    public void testRider() {
+    public void testRiderFroilan() {
         // given
         Person rider = new Person("Froilan");
         Horse horse = new Horse();
@@ -27,7 +27,7 @@ public class HorseTest {
         }
 
     @Test
-    public void testRider() {
+    public void testRiderFroilanda() {
         // given
         Person rider = new Person("Froilanda");
         Horse horse = new Horse();
