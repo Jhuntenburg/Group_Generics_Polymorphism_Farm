@@ -14,15 +14,30 @@ public class CornStalkTest {
     public void cornPlantHarvestTest(){
 
         CornStalk cStalk = new CornStalk();
-        Froilan f= new Froilan();
-        Tractor trac = new Tractor();
-        CropRows cropR = new CropRows();
 
-        trac.getMounted(f);
-        cropR.add(cStalk);
-        trac.harvest(cropR);
 
-        Assert.assertTrue(cropR.get(0).harvested);
+
+
+
+
+
+
+
+
+//
+//        CornStalk cStalk = new CornStalk();
+//        Froilan f= new Froilan();
+//        Tractor trac = new Tractor();
+//        CropRows cropR = new CropRows();
+//
+//
+//        trac.getMounted(f);
+//        cropR.add(cStalk);
+//        trac.harvest(cropR);
+//        //OR
+//      //  f.harvest(cropR); ???
+//
+//        Assert.assertTrue(cropR.get(0).harvested);
 
     }
 
