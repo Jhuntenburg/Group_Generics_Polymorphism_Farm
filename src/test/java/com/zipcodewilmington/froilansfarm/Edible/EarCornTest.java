@@ -8,8 +8,9 @@ public class EarCornTest {
 
     @Test
     public void ecInstanceOfVegetable (){
+        EarCorn earcorn = new EarCorn();
 
-        Assert.assertTrue(EarCorn instanceof Vegetable);
+        Assert.assertTrue(earcorn instanceof Vegetable);
     }
 
     @Test

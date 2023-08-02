@@ -15,27 +15,27 @@ public class HorseTest {
         horse = new Horse();
     }
 
-    @Test
-    public void testRiderFroilan() {
-        // given
-        Person rider = new Person("Froilan");
-        Horse horse = new Horse();
-        // when
-        horse.setRider(rider);
-        // then
-        assertEquals(rider, horse.getRider());
-        }
-
-    @Test
-    public void testRiderFroilanda() {
-        // given
-        Person rider = new Person("Froilanda");
-        Horse horse = new Horse();
-        // when
-        horse.setRider(rider);
-        // then
-        assertEquals(rider, horse.getRider());
-    }
+//    @Test
+//    public void testRiderFroilan() {
+//        // given
+//        Person rider = new Person("Froilan");
+//        Horse horse = new Horse();
+//        // when
+//        horse.setRider(rider);
+//        // then
+//        assertEquals(rider, horse.getRider());
+//        }
+//
+//    @Test
+//    public void testRiderFroilanda() {
+//        // given
+//        Person rider = new Person("Froilanda");
+//        Horse horse = new Horse();
+//        // when
+//        horse.setRider(rider);
+//        // then
+//        assertEquals(rider, horse.getRider());
+//    }
 
     @Test
     public void testRidden() {

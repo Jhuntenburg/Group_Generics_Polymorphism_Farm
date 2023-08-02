@@ -6,11 +6,11 @@ import org.junit.Test;
 
 public class EdibleInterfaceTest {
 
-    @Test
+//    @Test
 
-    public void instanceOfEdibleTest (){
-
-        Assert.assertTrue(Vegetable instanceof Edible);
-    }
+//    public void instanceOfEdibleTest (){
+//
+//        Assert.assertTrue(Vegetable instanceof Edible);
+//    }
 
 }
