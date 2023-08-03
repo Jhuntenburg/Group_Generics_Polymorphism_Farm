@@ -6,6 +6,10 @@ public class TomatoPlant extends Crop {
 
     Tomato tomato;
 
+    public TomatoPlant (){
+
+    }
+
     public TomatoPlant(boolean harvested) {
         super(harvested);
     }

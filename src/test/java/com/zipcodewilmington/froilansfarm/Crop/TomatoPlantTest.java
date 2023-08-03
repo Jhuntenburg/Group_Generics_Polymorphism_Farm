@@ -1,53 +1,52 @@
 package com.zipcodewilmington.froilansfarm.Crop;
 
+import com.zipcodewilmington.froilansfarm.Persons.Froilan;
 import com.zipcodewilmington.froilansfarm.StorageUnits.CropRows;
-import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
-import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
+
 import org.junit.Assert;
 import org.junit.Test;
 
 public class TomatoPlantTest {
 
     @Test
-    public void tomPInstanceOfCrop (){
-
-        Assert.assertTrue(TomatoPlant instanceof Crop);
+    public void tomPlantInstanceOfCrop (){
+        TomatoPlant tp = new TomatoPlant();
+        Assert.assertTrue(tp instanceof Crop);
     }
 
 
 
-public void tomPlantHarvestTest(){
 
     @Test
-    public void tomPlantHarvestTest(){
+    public void tomPlantPlanted1(){
 
-        TomatoPlant tomPlant = new TomatoPlant();
+        TomatoPlant tp = new TomatoPlant();
         Froilan f= new Froilan();
-        Tractor trac = new Tractor();
         CropRows cropR = new CropRows();
 
-        trac.getMounted(f);
-        cropR.add(tomPlant);
-        trac.harvest(cropR);
+        //when
 
-        Assert.assertTrue(cropR.get(0).harvested);
+        f.plants(cropR,tp);
+
+        Assert.assertTrue(cropR.contains(tp));
+
 
     }
+
     @Test
-    public void tomPlantFertilizationTest(){
+    public void cornStalkPlanted2(){
 
-        TomatoPlant tomPlant = new TomatoPlant();
-        Froilanda landa= new Froilanda();
-        CropDuster cdust = new CropDuster();
+        TomatoPlant tp = new TomatoPlant();
+        Froilan f= new Froilan();
         CropRows cropR = new CropRows();
 
+        //when
 
-        cdust.getMounted(landa);
-        cropR.add(tomPlant);
-        cdust.fertilizer(cropR);
+        f.plants(cropR,tp);
 
+        Assert.assertFalse(cropR.isEmpty());
 
-        Assert.assertTrue(cropR.get(0).fertilized);
 
     }
+
 }

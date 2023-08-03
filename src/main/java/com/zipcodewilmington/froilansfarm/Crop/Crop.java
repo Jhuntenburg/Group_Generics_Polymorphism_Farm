@@ -4,6 +4,9 @@ import Edible.Edible;
 
 public abstract class Crop implements Produce {
 
+    public Crop() {
+    }
+
     boolean harvested = false;
     boolean fertilized = false;
 

@@ -7,6 +7,11 @@ public class KaleStalk extends Crop{
 
     Kale kale;
 
+    public KaleStalk() {
+
+
+    }
+
     public KaleStalk(boolean harvested) {
         super(harvested);
     }

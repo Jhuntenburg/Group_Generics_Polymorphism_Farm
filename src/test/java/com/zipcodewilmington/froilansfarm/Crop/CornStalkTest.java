@@ -1,62 +1,50 @@
 package com.zipcodewilmington.froilansfarm.Crop;
 
 import com.zipcodewilmington.froilansfarm.Persons.Froilan;
-import com.zipcodewilmington.froilansfarm.Persons.Froilanda;
+
 import com.zipcodewilmington.froilansfarm.StorageUnits.CropRows;
-import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
-import com.zipcodewilmington.froilansfarm.Vehicle.Tractor;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class CornStalkTest {
 
     @Test
-    public void cornPlantHarvestTest(){
+    public void cornStalkInstanceOfCrop (){
+        CornStalk cStalk = new CornStalk();
+        Assert.assertTrue(cStalk instanceof Crop);
+    }
+
+    @Test
+    public void cornStalkPlanted1(){
 
         CornStalk cStalk = new CornStalk();
+        Froilan f= new Froilan();
+        CropRows cropR = new CropRows();
 
 
+        f.plants(cropR,cStalk);
 
+        Assert.assertTrue(cropR.contains(cStalk));
 
-
-
-
-
-
-
-//
-//        CornStalk cStalk = new CornStalk();
-//        Froilan f= new Froilan();
-//        Tractor trac = new Tractor();
-//        CropRows cropR = new CropRows();
-//
-//
-//        trac.getMounted(f);
-//        cropR.add(cStalk);
-//        trac.harvest(cropR);
-//        //OR
-//      //  f.harvest(cropR); ???
-//
-//        Assert.assertTrue(cropR.get(0).harvested);
 
     }
 
     @Test
-    public void cornPlantFertilizationTest(){
+    public void cornStalkPlanted2(){
 
         CornStalk cStalk = new CornStalk();
-        Froilanda landa= new Froilanda();
-        CropDuster cdust = new CropDuster();
+        Froilan f= new Froilan();
         CropRows cropR = new CropRows();
 
+        //when
 
-        cdust.getMounted(landa);
-        cropR.add(cStalk);
-        cdust.fertilize(cropR);
+        f.plants(cropR,cStalk);
 
+        Assert.assertFalse(cropR.isEmpty());
 
-        Assert.assertTrue(cropR.get(0).fertilized);
 
     }
+
+
 
 }

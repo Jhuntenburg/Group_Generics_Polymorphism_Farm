@@ -6,6 +6,11 @@ import Edible.EarCorn;
 public class CornStalk extends Crop{
     EarCorn ec;
 
+    public CornStalk() {
+
+
+    }
+
     public CornStalk(boolean harvested) {
         super(harvested);
     }
