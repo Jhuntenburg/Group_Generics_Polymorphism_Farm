@@ -1,5 +1,9 @@
 //package com.zipcodewilmington.froilansfarm.StorageUnitTest;
 //
+//import com.zipcodewilmington.froilansfarm.Crop.CornStalk;
+//import com.zipcodewilmington.froilansfarm.StorageUnits.CropRows;
+//import com.zipcodewilmington.froilansfarm.StorageUnits.FarmField;
+//import com.zipcodewilmington.froilansfarm.StorageUnits.StorageUnit;
 //import org.junit.Assert;
 //import org.junit.Test;
 //
@@ -7,14 +11,15 @@
 //
 //    @Test
 //    public void instanceOfStorageUnitTest(){
-//        Assert.assertTrue(FarmField instanceof StorageUnit);
+//        FarmField field = new FarmField();
+//        Assert.assertTrue(field instanceof StorageUnit);
 //    }
 //
 //    @Test
 //    public void addTest(){
 //        //given
 //        FarmField field = new FarmField();
-//        Croprow<CornStalk> croprow = new CropRow<>();
+//        CropRows<CornStalk> croprow = new CropRows<>();
 //        Integer expected = 1;
 //        //when
 //        field.add(croprow);
@@ -27,7 +32,7 @@
 //    public void removeTest(){
 //        //given
 //        FarmField field = new FarmField();
-//        Croprow<CornStalk> croprow = new CropRow<>();
+//        Croprows<CornStalk> croprow = new CropRows<>();
 //        field.add(croprow);
 //        Integer expected = 0;
 //        //when
