@@ -31,7 +31,6 @@ public class Tractor extends Vehicle implements FarmVehicle{
     }
 
 
-
     @Override
     public String makeNoise() {
         return "VROOM";

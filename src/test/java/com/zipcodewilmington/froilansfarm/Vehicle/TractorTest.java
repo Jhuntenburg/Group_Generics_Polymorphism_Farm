@@ -4,6 +4,7 @@ package com.zipcodewilmington.froilansfarm.Vehicle;
 import com.zipcodewilmington.froilansfarm.Persons.Froilan;
 import com.zipcodewilmington.froilansfarm.Persons.Person;
 import com.zipcodewilmington.froilansfarm.Persons.Rider;
+import com.zipcodewilmington.froilansfarm.StorageUnits.CropRows;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -25,10 +26,10 @@ public class TractorTest {
     public void tractorHarvestTest1() {
         //Given
         Tractor tractor = new Tractor();
-        CropRow cropRow = new CropRow(Crop);
+        CropRows cropRow = new CropRows();
 
         //When
-        tractor.harvest(Crop cropRow);
+        tractor.harvest(cropRow);
 
         //Then
         Assert.assertEquals(cropRow.isEmpty);
