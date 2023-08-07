@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
+import com.zipcodewilmington.froilansfarm.Persons.Froilan;
+import com.zipcodewilmington.froilansfarm.Persons.Froilanda;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,27 +17,27 @@ public class HorseTest {
         horse = new Horse();
     }
 
-//    @Test
-//    public void testRiderFroilan() {
-//        // given
-//        Person rider = new Person("Froilan");
-//        Horse horse = new Horse();
-//        // when
-//        horse.setRider(rider);
-//        // then
-//        assertEquals(rider, horse.getRider());
-//        }
-//
-//    @Test
-//    public void testRiderFroilanda() {
-//        // given
-//        Person rider = new Person("Froilanda");
-//        Horse horse = new Horse();
-//        // when
-//        horse.setRider(rider);
-//        // then
-//        assertEquals(rider, horse.getRider());
-//    }
+    @Test
+    public void testRiderFroilan() {
+        // given
+        Froilan rider = new Froilan("Froilan");
+        Horse horse = new Horse();
+        // when
+        horse.setRider(rider);
+        // then
+        assertEquals(rider, horse.getRider());
+        }
+
+    @Test
+    public void testRiderFroilanda() {
+        // given
+        Froilanda rider = new Froilanda("Froilanda");
+        Horse horse = new Horse();
+        // when
+        horse.setRider(rider);
+        // then
+        assertEquals(rider, horse.getRider());
+    }
 
     @Test
     public void testRidden() {
@@ -47,6 +49,7 @@ public class HorseTest {
         // then
         assertTrue(horse.isRidden());
     }
+
     @Test
     public void testMounted() {
         Horse horse = new Horse();
