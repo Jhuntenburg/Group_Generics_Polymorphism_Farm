@@ -1,7 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Crop;
 
-import Edible.Kale;
-import Edible.Tomato;
+import com.zipcodewilmington.froilansfarm.Edible.Kale;
 
 public class KaleStalk extends Crop{
 
@@ -13,7 +12,7 @@ public class KaleStalk extends Crop{
     }
 
     public KaleStalk(boolean harvested) {
-        super(harvested);
+        super();
     }
 
     public void yeild() {

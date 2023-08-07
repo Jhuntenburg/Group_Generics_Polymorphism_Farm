@@ -2,11 +2,12 @@ package com.zipcodewilmington.froilansfarm.Vehicle;
 
 
 import com.zipcodewilmington.froilansfarm.NoiseMaker;
+import com.zipcodewilmington.froilansfarm.Persons.Froilanda;
 import com.zipcodewilmington.froilansfarm.Persons.Person;
 import com.zipcodewilmington.froilansfarm.Persons.Rider;
 import com.zipcodewilmington.froilansfarm.Rideable;
 
-public abstract class Vehicle <AnyType extends Rider>implements VehicleInterface, NoiseMaker, Rideable {
+public abstract class Vehicle <AnyType extends Rider>implements VehicleInterface, NoiseMaker, Rideable<AnyType> {
     AnyType operator;
     boolean engineIsOn = false;
 
@@ -36,4 +37,5 @@ public abstract class Vehicle <AnyType extends Rider>implements VehicleInterface
         this.engineIsOn = false;
     }
 
+    public abstract void getMounted(AnyType rider);
 }

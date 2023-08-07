@@ -1,22 +1,15 @@
 package com.zipcodewilmington.froilansfarm.Crop;
 
-
+import com.zipcodewilmington.froilansfarm.Animal.Chicken;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class ProduceTest {
     @Test
     public void chickenInstanceOfProduce (){
+        Chicken chicken = new Chicken();
 
-        Assert.assertTrue(Chicken instanceof Produce);
-    }
-
-    @Test
-    public void chickenInstanceOfProduce (){
-
-       // Crop crop = new Crop();
-
-        Assert.assertTrue(crop instanceof Produce);
+        Assert.assertTrue(chicken instanceof Produce);
     }
 
 

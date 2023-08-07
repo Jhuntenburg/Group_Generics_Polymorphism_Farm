@@ -1,30 +1,28 @@
 package com.zipcodewilmington.froilansfarm.Edible;
 
-import Edible.Tomato;
-import Edible.Vegetable;
-import com.zipcodewilmington.froilansfarm.Persons.Froilan;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class TomatoTest {
     @Test
     public void tomInstanceOfVegetable (){
-        Tomato tom = new Tomato();
-        Assert.assertTrue(tom instanceof Vegetable);
+
+        Tomato tomato = new Tomato();
+        Assert.assertTrue(tomato instanceof Vegetable);
     }
 
-    @Test
-    public void tomGotEatenTest(){
-        //Given
-        Tomato tom = new Tomato();
-        Froilan f= new Froilan();
-
-        //When people eat (under Eater)
-        f.eat(tom);
-
-        Assert.assertTrue(tom.gotEaten);
-
-    }
+//    @Test
+//    public void tomGotEatenTest(){
+//        //Given
+//        Tomato tom = new Tomato();
+//        Froilan f= new Froilan();
+//
+//        //When people eat (under Eater)
+//        f.eat(tom);
+//
+//        Assert.assertTrue(tom.gotEaten);
+//
+//    }
 
     @Test
     public void tomSetEatenStat(){

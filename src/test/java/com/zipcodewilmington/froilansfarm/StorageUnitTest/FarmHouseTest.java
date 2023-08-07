@@ -1,5 +1,8 @@
 package com.zipcodewilmington.froilansfarm.StorageUnitTest;
 
+import com.zipcodewilmington.froilansfarm.Persons.Froilan;
+import com.zipcodewilmington.froilansfarm.StorageUnits.FarmHouse;
+import com.zipcodewilmington.froilansfarm.StorageUnits.StorageUnit;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -8,7 +11,8 @@ public class FarmHouseTest {
 
     @Test
     public void instanceOfStorageUnitTest(){
-        Assert.assertTrue(FarmHouse instanceof StorageUnit);
+        FarmHouse farmHouse = new FarmHouse();
+        Assert.assertTrue(farmHouse instanceof StorageUnit);
     }
 
     @Test
@@ -46,7 +50,7 @@ public class FarmHouseTest {
         farmHouse.add(froilan);
         Froilan expected = froilan;
         //when
-        Froilan actual = farmHouse.get(0);
+        Froilan actual = (Froilan) farmHouse.get(0);
         //then
         Assert.assertEquals(expected, actual);
     }
