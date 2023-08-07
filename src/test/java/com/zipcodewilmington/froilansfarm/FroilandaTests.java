@@ -70,17 +70,17 @@ public class FroilandaTests {
         Assert.assertEquals(expected, actual);
     }
 
-//    @Test
-//    public void feedTest() {
-//        Froilanda froilanda = new Froilanda();
-//        Chicken chicken1 = new Chicken();
-//        EarCorn earcorn = new EarCorn();
-//
-//        froilanda.feed(chicken1, earcorn);
-//
-//        Assert.assertTrue(chicken1.eat(earcorn));
-//
-//    }
+    @Test
+    public void feedTest() {
+        Froilanda froilanda = new Froilanda();
+        Chicken chicken1 = new Chicken();
+        EarCorn earcorn = new EarCorn();
+
+        froilanda.feed(chicken1, earcorn);
+
+        Assert.assertTrue(chicken1.getIsFed());
+
+    }
 
     @Test
     public void makeNoiseTest() {

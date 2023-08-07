@@ -43,6 +43,7 @@ public class Froilanda extends Person implements Pilot{
 
     @Override
     public void feed(Animal animal, Edible edible) {
+        animal.eat(edible);
 
     }
 
