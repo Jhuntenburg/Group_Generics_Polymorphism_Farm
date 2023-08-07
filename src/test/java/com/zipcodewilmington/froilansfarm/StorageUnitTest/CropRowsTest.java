@@ -1,5 +1,8 @@
 package com.zipcodewilmington.froilansfarm.StorageUnitTest;
 
+import com.zipcodewilmington.froilansfarm.Crop.TomatoPlant;
+import com.zipcodewilmington.froilansfarm.StorageUnits.CropRows;
+import com.zipcodewilmington.froilansfarm.StorageUnits.StorageUnit;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -7,16 +10,12 @@ public class CropRowsTest {
 
 
 
-    @Test
-    public void instanceOfStorageUnitTest(){
-        Assert.assertTrue(CropRows instanceof StorageUnit);
-    }
 
     @Test
     public void addTest(){
         //given
-        CropRow cropHouse = new CropRow();
-        TomatoPlant tomato = new TomatoPlant();
+        CropRows cropHouse = new CropRows();
+        TomatoPlant tomato = new TomatoPlant(false);
         Integer expected = 1;
         //when
         cropHouse.add(tomato);
@@ -28,12 +27,12 @@ public class CropRowsTest {
     @Test
     public void removeTest(){
         //given
-        CropRow cropHouse = new CropRow();
-        TomatoPlant tomato = new TomatoPlant();
-        cropHouse.add(tomato);
+        CropRows cropHouse = new CropRows();
+        TomatoPlant tomatoPlant = new TomatoPlant(false);
+        cropHouse.add(tomatoPlant);
         Integer expected = 0;
         //when
-        cropHouse.remove(tomato);
+        cropHouse.remove(tomatoPlant);
         Integer actual = cropHouse.size();
         //then
         Assert.assertEquals(expected, actual);
@@ -42,12 +41,12 @@ public class CropRowsTest {
     @Test
     public void getTest(){
         //given
-        CropRow cropHouse = new CropRow();
-        TomatoPlant tomato = new TomatoPlant();
-        cropHouse.add(tomato);
-        TomatoPlant expected = tomato;
+        CropRows<TomatoPlant> cropHouse = new CropRows();
+        TomatoPlant tomatoPlant = new TomatoPlant(false);
+        cropHouse.add(tomatoPlant);
+        TomatoPlant expected = tomatoPlant;
         //when
-        TomatoPlant actual = tomato.get(0);
+        TomatoPlant actual = (TomatoPlant) cropHouse.get(0);
         //then
         Assert.assertEquals(expected, actual);
     }
@@ -55,7 +54,7 @@ public class CropRowsTest {
     @Test
     public void isEmptyTest(){
         //given
-        CropRow cropHouse = new CropRow();
+        CropRows cropHouse = new CropRows();
 
         //Then
         Assert.assertTrue(cropHouse.isEmpty());

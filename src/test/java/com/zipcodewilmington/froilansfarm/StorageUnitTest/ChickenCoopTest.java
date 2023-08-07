@@ -1,5 +1,8 @@
 package com.zipcodewilmington.froilansfarm.StorageUnitTest;
 
+import com.zipcodewilmington.froilansfarm.Animal.Chicken;
+import com.zipcodewilmington.froilansfarm.StorageUnits.ChickenCoop;
+import com.zipcodewilmington.froilansfarm.StorageUnits.StorageUnit;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -7,7 +10,8 @@ public class ChickenCoopTest {
 
     @Test
     public void instanceOfStorageUnitTest(){
-        Assert.assertTrue(ChickenCoop instanceof StorageUnit);
+        ChickenCoop chickenCoop = new ChickenCoop();
+        Assert.assertTrue(chickenCoop instanceof StorageUnit);
     }
 
     @Test
@@ -45,7 +49,7 @@ public class ChickenCoopTest {
         chickenCoop.add(chicken);
         Chicken expected = chicken;
         //when
-        Chicken actual = ChickenCoop.get(0);
+        Chicken actual = chickenCoop.get(0);
         //then
         Assert.assertEquals(expected, actual);
     }

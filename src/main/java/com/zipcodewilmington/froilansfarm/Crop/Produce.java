@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Crop;
 
-import Edible.Edible;
+import com.zipcodewilmington.froilansfarm.Edible.Edible;
 
 public interface Produce <AnyType extends Edible> {
     public void yeild();

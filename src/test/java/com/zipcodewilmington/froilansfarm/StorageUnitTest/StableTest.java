@@ -1,18 +1,22 @@
 package com.zipcodewilmington.froilansfarm.StorageUnitTest;
 
+import com.zipcodewilmington.froilansfarm.Animal.Horse;
+import com.zipcodewilmington.froilansfarm.StorageUnits.Stables;
+import com.zipcodewilmington.froilansfarm.StorageUnits.StorageUnit;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class StableTest {
     @Test
     public void instanceOfStorageUnitTest(){
-        Assert.assertTrue(Stable instanceof StorageUnit);
+        Stables stables = new Stables();
+        Assert.assertTrue(stables instanceof StorageUnit);
     }
 
     @Test
     public void addTest(){
         //given
-        Stable horseHouse = new Stable();
+        Stables horseHouse = new Stables();
         Horse horse = new Horse();
         Integer expected = 1;
         //when
@@ -25,7 +29,7 @@ public class StableTest {
     @Test
     public void removeTest(){
         //given
-        Stable horseHouse = new Stable();
+        Stables horseHouse = new Stables();
         Horse horse = new Horse();
         horseHouse.add(horse);
         Integer expected = 0;
@@ -39,7 +43,7 @@ public class StableTest {
     @Test
     public void getTest(){
         //given
-        Stable horseHouse = new Stable();
+        Stables horseHouse = new Stables();
         Horse horse = new Horse();
         horseHouse.add(horse);
         Horse expected = horse;
@@ -52,7 +56,7 @@ public class StableTest {
     @Test
     public void isEmptyTest(){
         //given
-        Stable horseHouse = new Stable();
+        Stables horseHouse = new Stables();
 
         //Then
         Assert.assertTrue(horseHouse.isEmpty());

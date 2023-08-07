@@ -1,4 +1,4 @@
-package Edible;
+package com.zipcodewilmington.froilansfarm.Edible;
 
 public interface Edible {
 

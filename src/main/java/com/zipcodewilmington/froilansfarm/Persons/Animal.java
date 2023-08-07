@@ -1,10 +1,10 @@
 package com.zipcodewilmington.froilansfarm.Persons;
 
-import Edible.Edible;
+import com.zipcodewilmington.froilansfarm.Edible.Edible;
 import com.zipcodewilmington.froilansfarm.NoiseMaker;
 
-public abstract class Animal implements Eater<Edible>, NoiseMaker {
-    public static Boolean isFed;
+public abstract class Animal<FoodType extends Edible> implements Eater<Edible>, NoiseMaker {
+    public Boolean isFed = false;
    private String name;
 
     public Animal(String name) {
@@ -24,12 +24,12 @@ public abstract class Animal implements Eater<Edible>, NoiseMaker {
         this.name = name;
     }
 
-    public static Boolean getIsFed() {
+    public Boolean getIsFed() {
         return isFed;
     }
 
-    public static void setIsFed(Boolean isFed) {
-        Animal.isFed = isFed;
+    public  void setIsFed(Boolean isFed) {
+        this.isFed = isFed;
     }
 
 

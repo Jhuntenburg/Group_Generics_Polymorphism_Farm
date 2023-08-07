@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
+import com.zipcodewilmington.froilansfarm.Persons.Froilan;
+import com.zipcodewilmington.froilansfarm.Persons.Froilanda;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,9 +18,9 @@ public class HorseTest {
     }
 
     @Test
-    public void testRider() {
+    public void testRiderFroilan() {
         // given
-        Person rider = new Person("Froilan");
+        Froilan rider = new Froilan("Froilan");
         Horse horse = new Horse();
         // when
         horse.setRider(rider);
@@ -27,9 +29,9 @@ public class HorseTest {
         }
 
     @Test
-    public void testRider() {
+    public void testRiderFroilanda() {
         // given
-        Person rider = new Person("Froilanda");
+        Froilanda rider = new Froilanda("Froilanda");
         Horse horse = new Horse();
         // when
         horse.setRider(rider);

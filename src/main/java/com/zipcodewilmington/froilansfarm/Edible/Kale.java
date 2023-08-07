@@ -1,6 +1,8 @@
-package Edible;
+package com.zipcodewilmington.froilansfarm.Edible;
 
-public class Tomato extends Vegetable{
+public class Kale extends Vegetable {
+
+
     @Override
     public boolean isEdible() {
         if(gotEaten){
@@ -8,4 +10,6 @@ public class Tomato extends Vegetable{
         }
         return true;
     }
+
+
 }

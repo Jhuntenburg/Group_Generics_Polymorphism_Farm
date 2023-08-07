@@ -1,22 +1,25 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
 
-import com.zipcodewilmington.froilansfarm.Persons.Person;
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
+import com.zipcodewilmington.froilansfarm.Persons.Froilanda;
 import com.zipcodewilmington.froilansfarm.Persons.Rider;
 import com.zipcodewilmington.froilansfarm.Rideable;
+import com.zipcodewilmington.froilansfarm.StorageUnits.CropRows;
 
-public class CropDuster extends Vehicle implements Rideable, FarmVehicle, AirCraft {
+public class CropDuster extends Vehicle<Froilanda> implements Rideable<Froilanda>, FarmVehicle, AirCraft {
 
+    Boolean isFlying = false;
 
     public CropDuster(){super();}
 
-    public CropDuster(Rider operator) {
+    public CropDuster(Froilanda operator) {
         super(operator);
     }
 
-
-    public void fertalize() {
-
+    @Override
+    public void getMounted(Froilanda rider) {
+        this.operator = rider;
     }
 
 
@@ -27,16 +30,21 @@ public class CropDuster extends Vehicle implements Rideable, FarmVehicle, AirCra
 
     @Override
     public void fly() {
+        this.isFlying = true;
+    }
 
+    public void land() {
+        this.isFlying = false;
     }
 
     @Override
-    public void operateOnFarm() {
-
+    public void operateOnFarm(CropRows cropRows) {
+        for (Object c : cropRows) {
+            if (c instanceof Crop) {
+                ((Crop) c).setFertilized(true);
+            }
+        }
     }
 
-    @Override
-    public void getMounted(Rider rider) {
-        this.operator = rider;
-    }
+
 }

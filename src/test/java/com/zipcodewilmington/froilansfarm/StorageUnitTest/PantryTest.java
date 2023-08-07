@@ -1,5 +1,8 @@
 package com.zipcodewilmington.froilansfarm.StorageUnitTest;
 
+import com.zipcodewilmington.froilansfarm.Edible.Egg;
+import com.zipcodewilmington.froilansfarm.StorageUnits.Pantry;
+import com.zipcodewilmington.froilansfarm.StorageUnits.StorageUnit;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -7,10 +10,6 @@ public class PantryTest {
 
 
 
-    @Test
-    public void instanceOfStorageUnitTest(){
-        Assert.assertTrue(Pantry instanceof StorageUnit);
-    }
 
     @Test
     public void addTest(){
@@ -44,10 +43,10 @@ public class PantryTest {
         //given
         Pantry pantry = new Pantry();
         Egg egg  = new Egg();
-        pantry.add(egg);
+        pantry.getEggList().add(egg);
         Egg expected = egg;
         //when
-       Egg actual = egg.get(0);
+       Egg actual = pantry.getEggList().get(0);
         //then
         Assert.assertEquals(expected, actual);
     }

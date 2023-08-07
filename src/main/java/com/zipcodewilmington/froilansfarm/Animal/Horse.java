@@ -1,11 +1,21 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
-public class Horse {
+import com.zipcodewilmington.froilansfarm.Edible.EarCorn;
+import com.zipcodewilmington.froilansfarm.Edible.Edible;
+import com.zipcodewilmington.froilansfarm.Persons.Animal;
+import com.zipcodewilmington.froilansfarm.Persons.Person;
+import com.zipcodewilmington.froilansfarm.Rideable;
+
+public class Horse extends Animal<EarCorn> implements Rideable<Person> {
+
+    private Person rider ;
     public void setRider(Person rider) {
+        this.rider = rider;
+
     }
 
     public Object getRider() {
-        return null;
+        return rider;
     }
 
     public boolean isRidden() {
@@ -25,4 +35,15 @@ public class Horse {
     public String makeNoise() {
         return "Whinny";
     }
+
+    @Override
+    public void eat(Edible edible) {
+
+    }
+
+    @Override
+    public void getMounted(Person rider) {
+
+    }
+
 }
