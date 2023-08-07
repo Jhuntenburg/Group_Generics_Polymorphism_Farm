@@ -7,7 +7,7 @@ public class KaleStalk extends Crop{
     Kale kale;
 
     public KaleStalk(boolean harvested) {
-        super(harvested);
+        super();
     }
 
     public void yeild() {

@@ -19,7 +19,7 @@ public class Froilan extends Person implements Botanist, Farmer{
     @Override
     public void plants(CropRows cropRows, Crop crop) {
 
-//        cropRows.add(crop);
+    cropRows.add(crop);
     }
 
 //    @Override

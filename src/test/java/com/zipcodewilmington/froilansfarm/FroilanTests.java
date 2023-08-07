@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.Animal.Chicken;
+import com.zipcodewilmington.froilansfarm.Crop.CornStalk;
 import com.zipcodewilmington.froilansfarm.Edible.EarCorn;
 import com.zipcodewilmington.froilansfarm.Edible.Egg;
 import com.zipcodewilmington.froilansfarm.Edible.Tomato;
@@ -96,17 +97,18 @@ public class FroilanTests {
 //        Assert.assertTrue(froilan.isFed());
 //    }
 //
-//    @Test
-//    public void plantsTest() {
-//        Froilan froilan = new Froilan();
-//        CropRows row1 = new CropRows();
-//
-//        froilan.plants(row1, CornStalk);
-//
-//
-//        Assert.assertTrue(row1.contains(CornStalk));
-//
-//    }
+    @Test
+    public void plantsTest() {
+        Froilan froilan = new Froilan();
+        CropRows row1 = new CropRows();
+        CornStalk cornStalk = new CornStalk();
+
+        froilan.plants(row1, cornStalk);
+
+
+        Assert.assertTrue(row1.contains(cornStalk));
+
+    }
 
     @Test
     public void mountTest() {
