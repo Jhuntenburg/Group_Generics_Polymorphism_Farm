@@ -49,6 +49,7 @@ public class HorseTest {
         // then
         assertTrue(horse.isRidden());
     }
+
     @Test
     public void testMounted() {
         Horse horse = new Horse();
