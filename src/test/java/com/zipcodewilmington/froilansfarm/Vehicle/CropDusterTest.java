@@ -1,7 +1,10 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
 
+import com.zipcodewilmington.froilansfarm.Crop.KaleStalk;
+import com.zipcodewilmington.froilansfarm.Edible.Kale;
 import com.zipcodewilmington.froilansfarm.Persons.Froilan;
+import com.zipcodewilmington.froilansfarm.Persons.Froilanda;
 import com.zipcodewilmington.froilansfarm.Persons.Person;
 import com.zipcodewilmington.froilansfarm.Persons.Rider;
 import com.zipcodewilmington.froilansfarm.StorageUnits.CropRows;
@@ -21,24 +24,10 @@ public class CropDusterTest {
         Assert.assertTrue(cropDuster instanceof Vehicle);
     }
 
-<<<<<<< HEAD
-//    @Test
-//    public void cropDusterFertilizerFieldTest() {
-//        //Given
-//        CropDuster cropDuster = new CropDuster();
-//        CropRows kaleRow = new CropRows();
-//
-//        //When
-//        cropDuster.fertilizer(kaleRow);
-//
-//        //Then
-//        Assert.assertTrue(kaleStalk.fertalized);
-//    }
-
     @Test
     public void cropDusterGetMountedTest1() {
         //Given
-        Froilan dan = new Froilan("Dan");
+        Froilanda dan = new Froilanda("Dan");
         CropDuster cropDuster = new CropDuster();
 
         //When
@@ -49,18 +38,24 @@ public class CropDusterTest {
 
 
     }
-=======
+
     @Test
     public void cropDusterFertilizerFieldTest() {
         //Given
         CropDuster cropDuster = new CropDuster();
-        CropRows kaleRow = new CropRows();
+        CropRows<KaleStalk> kaleRow = new CropRows();
 
         //When
-        cropDuster.operateOnFarm();
+        cropDuster.operateOnFarm(kaleRow);
+        boolean allFert = true;
+
+        for (KaleStalk k : kaleRow) {
+            if (!k.hasBeenFertilized())
+                allFert = false;
+        }
 
         //Then
-        Assert.assertTrue(kaleStalk.fertalized);
+        Assert.assertTrue(allFert);
     }
 
 //    @Test
@@ -77,7 +72,6 @@ public class CropDusterTest {
 //
 //
 //    }
->>>>>>> master
 
     @Test
     public void cropDusterGetMountedTest2() {

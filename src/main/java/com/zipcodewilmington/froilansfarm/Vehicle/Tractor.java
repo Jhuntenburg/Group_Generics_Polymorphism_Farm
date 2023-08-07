@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
 
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Edible.Vegetable;
 import com.zipcodewilmington.froilansfarm.Persons.Rider;
 import com.zipcodewilmington.froilansfarm.StorageUnits.CropRows;
@@ -44,6 +45,12 @@ public class Tractor extends Vehicle implements FarmVehicle{
 
     @Override
     public void operateOnFarm(CropRows cropRows) {
+        for (Object c : cropRows) {
+            if (c instanceof Crop) {
+                ((Crop) c).setHarvested(true);
+            }
+        }
 
+        // cropRows.stream().forEach( c -> c.setHarvested(true));
     }
 }

@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
 
+import com.zipcodewilmington.froilansfarm.Crop.CornStalk;
+import com.zipcodewilmington.froilansfarm.Crop.KaleStalk;
 import com.zipcodewilmington.froilansfarm.Persons.Froilan;
 import com.zipcodewilmington.froilansfarm.Persons.Person;
 import com.zipcodewilmington.froilansfarm.Persons.Rider;
@@ -22,33 +24,25 @@ public class TractorTest {
         Assert.assertTrue(tractor instanceof Vehicle);
     }
 
-<<<<<<< HEAD
+
     @Test
     public void tractorHarvestTest1() {
         //Given
-        Tractor tractor = new Tractor();
-        CropRows cropRow = new CropRows();
+        CropDuster cropDuster = new CropDuster();
+        CropRows<CornStalk> cornRow = new CropRows();
 
         //When
-        tractor.harvest(cropRow);
+        cropDuster.operateOnFarm(cornRow);
+        boolean allHarv = true;
+        for (CornStalk c : cornRow) {
+            if (c.getHarvested())
+                allHarv = false;
+        }
 
         //Then
-        Assert.assertEquals(cropRow.isEmpty);
+        Assert.assertTrue(allHarv);
     }
-=======
-//    @Test
-//    public void tractorHarvestTest1() {
-//        //Given
-//        Tractor tractor = new Tractor();
-//        CropRows cropRow = new CropRows();
-//
-//        //When
-//        tractor.harvest(cropRow);
-//
-//        //Then
-//        Assert.assertEquals(cropRow.isEmpty);
-//    }
->>>>>>> master
+
 
     @Test
     public void tractorGetMountedTest1() {
