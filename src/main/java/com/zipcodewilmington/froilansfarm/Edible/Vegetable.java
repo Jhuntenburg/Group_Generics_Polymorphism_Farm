@@ -1,4 +1,4 @@
-package Edible;
+package com.zipcodewilmington.froilansfarm.Edible;
 
 public abstract class Vegetable implements Edible{
 

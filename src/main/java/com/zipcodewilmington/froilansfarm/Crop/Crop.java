@@ -1,7 +1,5 @@
 package com.zipcodewilmington.froilansfarm.Crop;
 
-import Edible.Edible;
-
 public abstract class Crop implements Produce {
 
     boolean harvested = false;
