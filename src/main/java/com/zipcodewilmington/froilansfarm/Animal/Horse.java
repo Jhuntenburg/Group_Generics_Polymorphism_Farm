@@ -8,6 +8,7 @@ import com.zipcodewilmington.froilansfarm.Rideable;
 
 public class Horse extends Animal<EarCorn> implements Rideable<Person> {
 
+    private boolean isRidden = false;
     private Person rider ;
     public void setRider(Person rider) {
         this.rider = rider;
@@ -18,20 +19,13 @@ public class Horse extends Animal<EarCorn> implements Rideable<Person> {
         return rider;
     }
 
-    public boolean isRidden() {
-        return false;
+    public boolean getIsRidden() {
+        return isRidden;
     }
 
     public void setRidden(boolean b) {
+        this.isRidden = b;
     }
-
-    public boolean isMounted() {
-        return false;
-    }
-
-    public void setMounted(boolean b) {
-    }
-
     public String makeNoise() {
         return "Whinny";
     }
