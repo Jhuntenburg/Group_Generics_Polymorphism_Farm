@@ -1,7 +1,6 @@
 package com.zipcodewilmington.froilansfarm.StorageUnits;
 
-
-import Edible.*;
+import com.zipcodewilmington.froilansfarm.Edible.*;
 
 import java.util.ArrayList;
 

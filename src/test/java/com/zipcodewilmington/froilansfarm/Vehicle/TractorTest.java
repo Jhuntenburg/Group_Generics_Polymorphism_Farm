@@ -22,6 +22,7 @@ public class TractorTest {
         Assert.assertTrue(tractor instanceof Vehicle);
     }
 
+<<<<<<< HEAD
     @Test
     public void tractorHarvestTest1() {
         //Given
@@ -34,6 +35,20 @@ public class TractorTest {
         //Then
         Assert.assertEquals(cropRow.isEmpty);
     }
+=======
+//    @Test
+//    public void tractorHarvestTest1() {
+//        //Given
+//        Tractor tractor = new Tractor();
+//        CropRows cropRow = new CropRows();
+//
+//        //When
+//        tractor.harvest(cropRow);
+//
+//        //Then
+//        Assert.assertEquals(cropRow.isEmpty);
+//    }
+>>>>>>> master
 
     @Test
     public void tractorGetMountedTest1() {

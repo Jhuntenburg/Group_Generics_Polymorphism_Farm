@@ -21,6 +21,7 @@ public class CropDusterTest {
         Assert.assertTrue(cropDuster instanceof Vehicle);
     }
 
+<<<<<<< HEAD
 //    @Test
 //    public void cropDusterFertilizerFieldTest() {
 //        //Given
@@ -48,6 +49,35 @@ public class CropDusterTest {
 
 
     }
+=======
+    @Test
+    public void cropDusterFertilizerFieldTest() {
+        //Given
+        CropDuster cropDuster = new CropDuster();
+        CropRows kaleRow = new CropRows();
+
+        //When
+        cropDuster.operateOnFarm();
+
+        //Then
+        Assert.assertTrue(kaleStalk.fertalized);
+    }
+
+//    @Test
+//    public void cropDusterGetMountedTest1() {
+//        //Given
+//        Froilan dan = new Froilan("Dan");
+//        CropDuster cropDuster = new CropDuster();
+//
+//        //When
+//        cropDuster.getMounted(dan);
+//
+//        //Then
+//        Assert.assertTrue(tractor.getPerson != null);
+//
+//
+//    }
+>>>>>>> master
 
     @Test
     public void cropDusterGetMountedTest2() {

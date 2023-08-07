@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Persons;
 
+import com.zipcodewilmington.froilansfarm.Rideable;
 import com.zipcodewilmington.froilansfarm.Vehicle.Vehicle;
 
 public interface Rider<VehicleType extends Rideable> {

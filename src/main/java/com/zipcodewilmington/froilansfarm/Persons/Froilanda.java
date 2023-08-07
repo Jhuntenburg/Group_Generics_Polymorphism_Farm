@@ -1,9 +1,12 @@
 package com.zipcodewilmington.froilansfarm.Persons;
 
+import com.zipcodewilmington.froilansfarm.Edible.Edible;
+import com.zipcodewilmington.froilansfarm.Rideable;
 import com.zipcodewilmington.froilansfarm.StorageUnits.Pantry;
 import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 
-public class Froilanda extends Person implements Rider, Pilot{
+
+public class Froilanda extends Person implements Pilot{
     int eatenfood=0;
 
     public Froilanda(){
@@ -21,18 +24,13 @@ public class Froilanda extends Person implements Rider, Pilot{
         return "Look out below!";
     }
 
-    @Override
+
     public void eat(Edible edible) {
-        Pantry.remove(edible);
+//        Pantry.remove(edible);
         eatenfood ++;
 
     }
 
-    @Override
-    public void feed(Animal animal, Edible edible) {
-        animal.eat(edible);
-
-    }
 
     @Override
     public void flys(CropDuster cropDuster) {
@@ -49,4 +47,16 @@ public class Froilanda extends Person implements Rider, Pilot{
     public void dismount(Rideable rideable) {
         rideable.getMounted(null);
     }
+
+    @Override
+    public void feed(Animal animal, Edible edible) {
+
+    }
+
+    @Override
+    public void eat(Object o) {
+
+    }
+
+
 }

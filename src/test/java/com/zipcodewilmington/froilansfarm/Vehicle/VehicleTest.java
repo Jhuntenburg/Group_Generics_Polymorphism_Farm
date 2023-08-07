@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm.Vehicle;
 
 
 import com.zipcodewilmington.froilansfarm.Persons.Froilan;
+import com.zipcodewilmington.froilansfarm.Persons.Froilanda;
 import com.zipcodewilmington.froilansfarm.Persons.Person;
 import com.zipcodewilmington.froilansfarm.Persons.Rider;
 import org.junit.Assert;
@@ -78,11 +79,11 @@ public class VehicleTest {
     public void vehicleSetOperatorTest2() {
         //Given
         Froilan dan = new Froilan("Dan");
-        Froilan sue = new Froilan("Sue");
+        Froilanda sue = new Froilanda("Sue");
         CropDuster cropDuster = new CropDuster(sue);
 
         //When
-        cropDuster.setOperator(dan);
+        cropDuster.setOperator(sue);
 
         Person expectedPerson = dan;
         Rider actualPerson = cropDuster.getOperator();

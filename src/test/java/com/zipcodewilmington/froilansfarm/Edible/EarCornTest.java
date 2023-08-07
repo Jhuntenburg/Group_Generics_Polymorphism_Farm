@@ -1,7 +1,5 @@
 package com.zipcodewilmington.froilansfarm.Edible;
 
-import Edible.EarCorn;
-import Edible.Vegetable;
 import com.zipcodewilmington.froilansfarm.Persons.Froilan;
 import org.junit.Assert;
 import org.junit.Test;
@@ -10,8 +8,9 @@ public class EarCornTest {
 
     @Test
     public void ecInstanceOfVegetable (){
+        EarCorn earcorn = new EarCorn();
 
-        Assert.assertTrue(EarCorn instanceof Vegetable);
+        Assert.assertTrue(earcorn instanceof Vegetable);
     }
 
     @Test

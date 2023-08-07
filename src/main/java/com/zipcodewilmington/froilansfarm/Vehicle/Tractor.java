@@ -1,8 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
 
-import Edible.Vegetable;
-import com.zipcodewilmington.froilansfarm.Persons.Person;
+import com.zipcodewilmington.froilansfarm.Edible.Vegetable;
 import com.zipcodewilmington.froilansfarm.Persons.Rider;
 import com.zipcodewilmington.froilansfarm.StorageUnits.CropRows;
 
@@ -36,13 +35,15 @@ public class Tractor extends Vehicle implements FarmVehicle{
         return "VROOM";
     }
 
-    @Override
-    public void operateOnFarm() {
 
-    }
 
     @Override
     public void getMounted(Rider rider) {
         this.operator = rider;
+    }
+
+    @Override
+    public void operateOnFarm(CropRows cropRows) {
+
     }
 }

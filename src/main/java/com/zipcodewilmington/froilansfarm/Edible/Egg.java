@@ -1,4 +1,4 @@
-package Edible;
+package com.zipcodewilmington.froilansfarm.Edible;
 
 public class Egg implements Edible{
     boolean gotEaten = false;

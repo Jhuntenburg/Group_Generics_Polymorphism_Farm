@@ -1,13 +1,14 @@
 package com.zipcodewilmington.froilansfarm.Crop;
 
-import Edible.EarCorn;
+import com.zipcodewilmington.froilansfarm.Edible.EarCorn;
 
 
 public class CornStalk extends Crop{
     EarCorn ec;
 
-    public CornStalk(boolean harvested) {
-        super(harvested);
+    public CornStalk() {
+        super();
+
     }
 
     public void yeild() {
