@@ -59,6 +59,9 @@ public class Froilan extends Person implements Botanist, Farmer{
     public void eat(Edible edible) {
 //        Pantry.remove(edible);
         eatenfood ++;
+        if (this.eatenfood >= 8){
+            this.isFed = true;
+        }
 
     }
 

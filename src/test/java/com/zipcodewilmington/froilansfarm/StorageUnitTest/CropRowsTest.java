@@ -28,28 +28,28 @@ public class CropRowsTest {
     public void removeTest(){
         //given
         CropRows cropHouse = new CropRows();
-        TomatoPlant tomato = new TomatoPlant(false);
-        cropHouse.add(tomato);
+        TomatoPlant tomatoPlant = new TomatoPlant(false);
+        cropHouse.add(tomatoPlant);
         Integer expected = 0;
         //when
-        cropHouse.remove(tomato);
+        cropHouse.remove(tomatoPlant);
         Integer actual = cropHouse.size();
         //then
         Assert.assertEquals(expected, actual);
     }
 
-//    @Test
-//    public void getTest(){
-//        //given
-//        CropRows cropHouse = new CropRows();
-//        TomatoPlant tomato = new TomatoPlant(false);
-//        cropHouse.add(tomato);
-//        TomatoPlant expected = tomato;
-//        //when
-//        TomatoPlant actual = cropHouse.get(0);
-//        //then
-//        Assert.assertEquals(expected, actual);
-//    }
+    @Test
+    public void getTest(){
+        //given
+        CropRows<TomatoPlant> cropHouse = new CropRows();
+        TomatoPlant tomatoPlant = new TomatoPlant(false);
+        cropHouse.add(tomatoPlant);
+        TomatoPlant expected = tomatoPlant;
+        //when
+        TomatoPlant actual = (TomatoPlant) cropHouse.get(0);
+        //then
+        Assert.assertEquals(expected, actual);
+    }
 
     @Test
     public void isEmptyTest(){
