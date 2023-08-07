@@ -78,14 +78,13 @@ public class VehicleTest {
     @Test
     public void vehicleSetOperatorTest2() {
         //Given
-        Froilan dan = new Froilan("Dan");
         Froilanda sue = new Froilanda("Sue");
         CropDuster cropDuster = new CropDuster(sue);
 
         //When
         cropDuster.setOperator(sue);
 
-        Person expectedPerson = dan;
+        Person expectedPerson = sue;
         Rider actualPerson = cropDuster.getOperator();
 
         //Then

@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
 
+import com.zipcodewilmington.froilansfarm.Crop.CornStalk;
+import com.zipcodewilmington.froilansfarm.Crop.KaleStalk;
 import com.zipcodewilmington.froilansfarm.Persons.Froilan;
 import com.zipcodewilmington.froilansfarm.Persons.Person;
 import com.zipcodewilmington.froilansfarm.Persons.Rider;
@@ -22,18 +24,25 @@ public class TractorTest {
         Assert.assertTrue(tractor instanceof Vehicle);
     }
 
-//    @Test
-//    public void tractorHarvestTest1() {
-//        //Given
-//        Tractor tractor = new Tractor();
-//        CropRows cropRow = new CropRows();
-//
-//        //When
-//        tractor.harvest(cropRow);
-//
-//        //Then
-//        Assert.assertEquals(cropRow.isEmpty);
-//    }
+
+    @Test
+    public void tractorOperateOnfarmTest1() {
+        //Given
+        CropDuster cropDuster = new CropDuster();
+        CropRows<CornStalk> cornRow = new CropRows();
+
+        //When
+        cropDuster.operateOnFarm(cornRow);
+        boolean allHarv = true;
+        for (CornStalk c : cornRow) {
+            if (c.getHarvested())
+                allHarv = false;
+        }
+
+        //Then
+        Assert.assertTrue(allHarv);
+    }
+
 
     @Test
     public void tractorGetMountedTest1() {
@@ -63,6 +72,21 @@ public class TractorTest {
         Assert.assertEquals(expectedPerson, actualPerson);
 
     }
+    @Test
+    public void makeNoiseTest() {
+        //Given
+        Tractor mater = new Tractor();
+
+        //When
+        String expected = "VROOM";
+        String actual = mater.makeNoise();
+
+        //Then
+        Assert.assertEquals(expected, actual);
+
+    }
+
+
 
 
 }

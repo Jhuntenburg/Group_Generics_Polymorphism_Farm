@@ -9,8 +9,7 @@ import com.zipcodewilmington.froilansfarm.StorageUnits.CropRows;
 
 public class CropDuster extends Vehicle<Froilanda> implements Rideable<Froilanda>, FarmVehicle, AirCraft {
 
-
-    private Rider rider;
+    Boolean isFlying = false;
 
     public CropDuster(){super();}
 
@@ -20,10 +19,8 @@ public class CropDuster extends Vehicle<Froilanda> implements Rideable<Froilanda
 
     @Override
     public void getMounted(Froilanda rider) {
-
-        this.rider = rider;
+        this.operator = rider;
     }
-
 
 
     @Override
@@ -33,13 +30,19 @@ public class CropDuster extends Vehicle<Froilanda> implements Rideable<Froilanda
 
     @Override
     public void fly() {
+        this.isFlying = true;
+    }
 
+    public void land() {
+        this.isFlying = false;
     }
 
     @Override
     public void operateOnFarm(CropRows cropRows) {
-        for (Crop c : cropRows) {
-            c.setFertilized(true);
+        for (Object c : cropRows) {
+            if (c instanceof Crop) {
+                ((Crop) c).setFertilized(true);
+            }
         }
     }
 
