@@ -72,31 +72,31 @@ public class FroilanTests {
         Assert.assertEquals(expected, actual);
     }
 
-//    @Test
-//    public void eatTest() {
-//        Froilan froilan = new Froilan();
-//        EarCorn earcorn = new EarCorn();
-//        EarCorn earcorn2 = new EarCorn();
-//        Tomato tomato1 = new Tomato();
-//        Egg egg1 = new Egg();
-//        Egg egg2 = new Egg();
-//        Egg egg3 = new Egg();
-//        Egg egg4 = new Egg();
-//        Egg egg5 = new Egg();
-//
-//
-//        froilan.eat(earcorn);
-//        froilan.eat(earcorn2);
-//        froilan.eat(tomato1);
-//        froilan.eat(egg1);
-//        froilan.eat(egg2);
-//        froilan.eat(egg3);
-//        froilan.eat(egg4);
-//        froilan.eat(egg5);
-//
-//        Assert.assertTrue(froilan.isFed());
-//    }
-//
+    @Test
+    public void eatTest() {
+        Froilan froilan = new Froilan();
+        EarCorn earcorn = new EarCorn();
+        EarCorn earcorn2 = new EarCorn();
+        Tomato tomato1 = new Tomato();
+        Egg egg1 = new Egg();
+        Egg egg2 = new Egg();
+        Egg egg3 = new Egg();
+        Egg egg4 = new Egg();
+        Egg egg5 = new Egg();
+
+
+        froilan.eat(earcorn);
+        froilan.eat(earcorn2);
+        froilan.eat(tomato1);
+        froilan.eat(egg1);
+        froilan.eat(egg2);
+        froilan.eat(egg3);
+        froilan.eat(egg4);
+        froilan.eat(egg5);
+
+        Assert.assertTrue(froilan.getIsFed());
+    }
+
     @Test
     public void plantsTest() {
         Froilan froilan = new Froilan();

@@ -6,10 +6,10 @@ import java.util.ArrayList;
 
 public class Pantry extends ArrayList<Edible>{
 
-    private static ArrayList<Tomato> tomatoList;
-    private static ArrayList<Kale> kaleList;
-    private static ArrayList<EarCorn> earCornList;
-    private static ArrayList<Egg> eggList;
+    private  ArrayList<Tomato> tomatoList;
+    private  ArrayList<Kale> kaleList;
+    private ArrayList<EarCorn> earCornList;
+    private  ArrayList<Egg> eggList;
 
     public Pantry() {
         this.tomatoList = new ArrayList<Tomato>();
@@ -18,6 +18,19 @@ public class Pantry extends ArrayList<Edible>{
         this.eggList = new ArrayList<Egg>();
     }
 
+    public ArrayList<Tomato> getTomatoList() {
+        return tomatoList;
+    }
 
+    public ArrayList<Kale> getKaleList() {
+        return kaleList;
+    }
 
+    public ArrayList<EarCorn> getEarCornList() {
+        return earCornList;
+    }
+
+    public ArrayList<Egg> getEggList() {
+        return eggList;
+    }
 }
