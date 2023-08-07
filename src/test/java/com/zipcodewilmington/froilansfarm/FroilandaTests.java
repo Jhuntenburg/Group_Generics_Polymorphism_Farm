@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm;
 import Edible.EarCorn;
 import Edible.Egg;
 import Edible.Tomato;
+import com.zipcodewilmington.froilansfarm.Animal.Chicken;
 import com.zipcodewilmington.froilansfarm.Persons.*;
 import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 import org.junit.Assert;
