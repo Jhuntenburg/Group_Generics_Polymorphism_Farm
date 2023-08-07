@@ -38,18 +38,18 @@ public class CropRowsTest {
         Assert.assertEquals(expected, actual);
     }
 
-//    @Test
-//    public void getTest(){
-//        //given
-//        CropRows cropHouse = new CropRows();
-//        TomatoPlant tomato = new TomatoPlant(false);
-//        cropHouse.add(tomato);
-//        TomatoPlant expected = tomato;
-//        //when
-//        TomatoPlant actual = cropHouse.get(0);
-//        //then
-//        Assert.assertEquals(expected, actual);
-//    }
+    @Test
+    public void getTest(){
+        //given
+        CropRows cropHouse = new CropRows();
+        TomatoPlant tomato = new TomatoPlant(false);
+        cropHouse.add(tomato);
+        TomatoPlant expected = tomato;
+        //when
+        TomatoPlant actual = cropHouse.get(0);
+        //then
+        Assert.assertEquals(expected, actual);
+    }
 
     @Test
     public void isEmptyTest(){
