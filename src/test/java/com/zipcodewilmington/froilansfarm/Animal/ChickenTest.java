@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
+import com.zipcodewilmington.froilansfarm.Edible.Egg;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,8 +20,9 @@ public class ChickenTest {
 
     @Test
     public void setHasBeenFertilizedTrue() {
-        chicken.setHasBeenFertilized(true);
-        Assert.assertTrue(chicken.isHasBeenFertilized());
+        Chicken chick = new Chicken();
+        chick.setHasBeenFertilized(true);
+        Assert.assertTrue(chick.isHasBeenFertilized());
     }
 
     @Test
@@ -33,15 +35,15 @@ public class ChickenTest {
     @Test
     public <EdibleEgg> void yield() {
         chicken.setHasBeenFertilized(false);
-        EdibleEgg actual = chicken.yield();
-        Assert.assertNotNull(actual);
+        Egg actual = chicken.yield();
+        Assert.assertNull(actual);
     }
 
     @Test
     public <EdibleEgg> void yield2() {
         chicken.setHasBeenFertilized(true);
-        EdibleEgg actual = chicken.yield();
-        Assert.assertNull(actual);
+        Egg actual = chicken.yield();
+        Assert.assertNotNull(actual);
     }
 }
 

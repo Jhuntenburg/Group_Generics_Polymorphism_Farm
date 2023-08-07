@@ -43,21 +43,21 @@ public class HorseTest {
     public void testRidden() {
         Horse horse = new Horse();
         // given
-        assertFalse(horse.isRidden());
+        assertFalse(horse.getIsRidden());
         // when
         horse.setRidden(true);
         // then
-        assertTrue(horse.isRidden());
+        assertTrue(horse.getIsRidden());
     }
     @Test
     public void testMounted() {
         Horse horse = new Horse();
         // given
-        assertFalse(horse.isMounted());
+        assertFalse(horse.getIsRidden());
         // when
-        horse.setMounted(true);
+        horse.setRidden(true);
         // then
-        assertTrue(horse.isMounted());
+        assertTrue(horse.getIsRidden());
     }
 
     @Test
