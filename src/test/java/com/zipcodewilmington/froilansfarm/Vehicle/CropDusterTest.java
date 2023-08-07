@@ -21,18 +21,18 @@ public class CropDusterTest {
         Assert.assertTrue(cropDuster instanceof Vehicle);
     }
 
-//    @Test
-//    public void cropDusterFertilizerFieldTest() {
-//        //Given
-//        CropDuster cropDuster = new CropDuster();
-//        CropRows kaleRow = new CropRows(kaleStalk);
-//
-//        //When
-//        cropDuster.fertilizer(kaleRow);
-//
-//        //Then
-//        Assert.assertTrue(kaleStalk.fertalized);
-//    }
+    @Test
+    public void cropDusterFertilizerFieldTest() {
+        //Given
+        CropDuster cropDuster = new CropDuster();
+        CropRows kaleRow = new CropRows();
+
+        //When
+        cropDuster.operateOnFarm();
+
+        //Then
+        Assert.assertTrue(kaleStalk.fertalized);
+    }
 
 //    @Test
 //    public void cropDusterGetMountedTest1() {

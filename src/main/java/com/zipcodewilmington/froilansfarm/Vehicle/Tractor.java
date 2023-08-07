@@ -36,13 +36,15 @@ public class Tractor extends Vehicle implements FarmVehicle{
         return "VROOM";
     }
 
-    @Override
-    public void operateOnFarm() {
 
-    }
 
     @Override
     public void getMounted(Rider rider) {
         this.operator = rider;
+    }
+
+    @Override
+    public void operateOnFarm(CropRows cropRows) {
+
     }
 }

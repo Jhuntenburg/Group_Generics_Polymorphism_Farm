@@ -1,9 +1,11 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
 
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Persons.Froilanda;
 import com.zipcodewilmington.froilansfarm.Persons.Rider;
 import com.zipcodewilmington.froilansfarm.Rideable;
+import com.zipcodewilmington.froilansfarm.StorageUnits.CropRows;
 
 public class CropDuster extends Vehicle<Froilanda> implements Rideable<Froilanda>, FarmVehicle, AirCraft {
 
@@ -23,10 +25,6 @@ public class CropDuster extends Vehicle<Froilanda> implements Rideable<Froilanda
     }
 
 
-    public void fertalize() {
-
-    }
-
 
     @Override
     public String makeNoise() {
@@ -39,8 +37,10 @@ public class CropDuster extends Vehicle<Froilanda> implements Rideable<Froilanda
     }
 
     @Override
-    public void operateOnFarm() {
-
+    public void operateOnFarm(CropRows cropRows) {
+        for (Crop c : cropRows) {
+            c.setFertilized(true);
+        }
     }
 
 
