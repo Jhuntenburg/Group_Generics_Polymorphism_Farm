@@ -26,7 +26,7 @@ public class TractorTest {
 
 
     @Test
-    public void tractorHarvestTest1() {
+    public void tractorOperateOnfarmTest1() {
         //Given
         CropDuster cropDuster = new CropDuster();
         CropRows<CornStalk> cornRow = new CropRows();
@@ -72,6 +72,21 @@ public class TractorTest {
         Assert.assertEquals(expectedPerson, actualPerson);
 
     }
+    @Test
+    public void makeNoiseTest() {
+        //Given
+        Tractor mater = new Tractor();
+
+        //When
+        String expected = "VROOM";
+        String actual = mater.makeNoise();
+
+        //Then
+        Assert.assertEquals(expected, actual);
+
+    }
+
+
 
 
 }

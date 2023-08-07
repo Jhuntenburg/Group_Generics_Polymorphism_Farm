@@ -31,13 +31,27 @@ public class CropDusterTest {
         CropDuster cropDuster = new CropDuster();
 
         //When
-        cropDuster.getMounted(dan);
 
         //Then
-        Assert.assertTrue(cropDuster.getOperator() != null);
-
+        Assert.assertTrue(cropDuster.getOperator() == null);
 
     }
+    @Test
+    public void cropDusterGetMountedTest2() {
+        //Given
+        Froilanda sam = new Froilanda("Sam");
+        CropDuster cropDuster = new CropDuster();
+
+        //When
+        cropDuster.getMounted(sam);
+        Froilanda expectedPerson = sam;
+        Froilanda actualPerson = cropDuster.getOperator();
+
+        //Then
+        Assert.assertEquals(expectedPerson, actualPerson);
+
+    }
+
 
     @Test
     public void cropDusterFertilizerFieldTest() {
@@ -58,35 +72,45 @@ public class CropDusterTest {
         Assert.assertTrue(allFert);
     }
 
-//    @Test
-//    public void cropDusterGetMountedTest1() {
-//        //Given
-//        Froilan dan = new Froilan("Dan");
-//        CropDuster cropDuster = new CropDuster();
-//
-//        //When
-//        cropDuster.getMounted(dan);
-//
-//        //Then
-//        Assert.assertTrue(tractor.getPerson != null);
-//
-//
-//    }
-
     @Test
-    public void cropDusterGetMountedTest2() {
+    public void makeNoiseTest() {
         //Given
-        Froilan sam = new Froilan("Sam");
-        CropDuster cropDuster = new CropDuster();
+        CropDuster spitFire = new CropDuster();
 
         //When
-        Rider expectedPerson = sam;
-        Rider actualPerson = cropDuster.getOperator();
+        String expected = "NYOOOM";
+        String actual = spitFire.makeNoise();
 
         //Then
-        Assert.assertEquals(expectedPerson, actualPerson);
-
+        Assert.assertEquals(expected, actual);
 
     }
+
+    @Test
+    public void flyTest() {
+        //Given
+        CropDuster spitFire = new CropDuster();
+
+        //When
+        spitFire.fly();
+
+        //Then
+        Assert.assertTrue(spitFire.isFlying);
+
+    }
+
+    @Test
+    public void landTest() {
+        //Given
+        CropDuster spitFire = new CropDuster();
+
+        //When
+        spitFire.fly();
+        spitFire.land();
+
+        //Then
+        Assert.assertFalse(spitFire.isFlying);
+    }
+
 
 }
