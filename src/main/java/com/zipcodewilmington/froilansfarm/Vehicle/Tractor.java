@@ -39,7 +39,7 @@ public class Tractor extends Vehicle implements FarmVehicle{
                 ((Crop) c).setHarvested(true);
             }
         }
-
-        // cropRows.stream().forEach( c -> c.setHarvested(true));
     }
+
+
 }

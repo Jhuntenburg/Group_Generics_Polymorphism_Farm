@@ -32,7 +32,7 @@ public class TractorTest {
         CropRows<CornStalk> cornRow = new CropRows();
 
         //When
-        cropDuster.operateOnFarm(cornRow);
+        mater.operateOnFarm(cornRow);
         boolean allHarv = true;
         for (CornStalk c : cornRow) {
             if (c.getHarvested())
