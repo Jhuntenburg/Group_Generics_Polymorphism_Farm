@@ -46,17 +46,17 @@ public class FroilandaTests {
     }
 
 
-//    @Test
-//    public void flysTest() {
-//        Froilanda froilanda = new Froilanda();
-//        CropDuster cropduster = new CropDuster();
-//
-//        froilanda.mount(cropduster);
-//        froilanda.flys(cropduster);
-//
-//        Assert.assertTrue(cropduster.getOperator == (froilanda));
-//    }
-    
+    @Test
+    public void flysTest() {
+        Froilanda froilanda = new Froilanda();
+        CropDuster cropduster = new CropDuster();
+
+        froilanda.mount(cropduster);
+        froilanda.flys(cropduster);
+
+        Assert.assertTrue(cropduster.getOperator() == (froilanda));
+    }
+
 
     @Test
     public void mountTest() {
