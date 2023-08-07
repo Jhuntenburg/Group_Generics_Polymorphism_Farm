@@ -28,7 +28,7 @@ public class TractorTest {
     @Test
     public void tractorOperateOnfarmTest1() {
         //Given
-        CropDuster cropDuster = new CropDuster();
+        Tractor mater = new Tractor();
         CropRows<CornStalk> cornRow = new CropRows();
 
         //When
