@@ -7,11 +7,15 @@ import com.zipcodewilmington.froilansfarm.Persons.Person;
 import com.zipcodewilmington.froilansfarm.Rideable;
 
 public class Horse extends Animal<EarCorn> implements Rideable<Person> {
+
+    private Person rider ;
     public void setRider(Person rider) {
+        this.rider = rider;
+
     }
 
     public Object getRider() {
-        return null;
+        return rider;
     }
 
     public boolean isRidden() {
