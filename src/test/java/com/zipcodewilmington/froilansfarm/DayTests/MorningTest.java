@@ -1,7 +1,9 @@
 package com.zipcodewilmington.froilansfarm.DayTests;
 
 import com.zipcodewilmington.froilansfarm.Animal.Horse;
-import com.zipcodewilmington.froilansfarm.Persons.Animal;
+import com.zipcodewilmington.froilansfarm.Edible.EarCorn;
+import com.zipcodewilmington.froilansfarm.Edible.Egg;
+import com.zipcodewilmington.froilansfarm.Edible.Tomato;
 import com.zipcodewilmington.froilansfarm.Persons.Froilan;
 import com.zipcodewilmington.froilansfarm.Persons.Froilanda;
 import com.zipcodewilmington.froilansfarm.StorageUnits.Stables;
@@ -62,12 +64,47 @@ public class MorningTest {
     }
 
     @Test
-    public void breakFastTest() {
+    public void breakfastFroilandaTest() {
+        Froilanda froilanda = new Froilanda();
+        EarCorn earcorn = new EarCorn();
+        Tomato tomato1 = new Tomato();
+        Tomato tomato2 = new Tomato();
+        Egg egg1 = new Egg();
+        Egg egg2 = new Egg();
+
+        froilanda.eat(earcorn);
+        froilanda.eat(tomato1);
+        froilanda.eat(tomato2);
+        froilanda.eat(egg1);
+        froilanda.eat(egg2);
+
+        Assert.assertTrue(froilanda.getIsFed());
+
+    }
+    @Test
+    public void breakFastFroilandTest() {
+
+        Froilan froilan = new Froilan();
+        EarCorn earcorn = new EarCorn();
+        EarCorn earcorn2 = new EarCorn();
+        Tomato tomato1 = new Tomato();
+        Egg egg1 = new Egg();
+        Egg egg2 = new Egg();
+        Egg egg3 = new Egg();
+        Egg egg4 = new Egg();
+        Egg egg5 = new Egg();
 
 
+        froilan.eat(earcorn);
+        froilan.eat(earcorn2);
+        froilan.eat(tomato1);
+        froilan.eat(egg1);
+        froilan.eat(egg2);
+        froilan.eat(egg3);
+        froilan.eat(egg4);
+        froilan.eat(egg5);
 
-
-
+        Assert.assertTrue(froilan.getIsFed());
     }
 
 
