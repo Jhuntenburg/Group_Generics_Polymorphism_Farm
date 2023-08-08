@@ -1,6 +1,9 @@
 package com.zipcodewilmington.froilansfarm.StorageUnitTest;
 
+import com.zipcodewilmington.froilansfarm.Edible.EarCorn;
 import com.zipcodewilmington.froilansfarm.Edible.Egg;
+import com.zipcodewilmington.froilansfarm.Edible.Kale;
+import com.zipcodewilmington.froilansfarm.Edible.Tomato;
 import com.zipcodewilmington.froilansfarm.StorageUnits.Pantry;
 import com.zipcodewilmington.froilansfarm.StorageUnits.StorageUnit;
 import org.junit.Assert;
@@ -39,7 +42,7 @@ public class PantryTest {
     }
 
     @Test
-    public void getTest(){
+    public void getEggTest(){
         //given
         Pantry pantry = new Pantry();
         Egg egg  = new Egg();
@@ -50,6 +53,44 @@ public class PantryTest {
         //then
         Assert.assertEquals(expected, actual);
     }
+    @Test
+    public void getKaleTest(){
+        //given
+        Pantry pantry = new Pantry();
+       Kale kale = new Kale();
+        pantry.getKaleList().add(kale);
+       Kale expected = kale;
+        //when
+        Kale actual = pantry.getKaleList().get(0);
+        //then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getEarCornTest(){
+        //given
+        Pantry pantry = new Pantry();
+        EarCorn corn = new EarCorn();
+        pantry.getEarCornList().add(corn);
+        EarCorn expected = corn;
+        //when
+        EarCorn actual = pantry.getEarCornList().get(0);
+        //then
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void getTomatoTest(){
+        //given
+        Pantry pantry = new Pantry();
+        Tomato tomato = new Tomato();
+        pantry.getTomatoList().add(tomato);
+        Tomato expected = tomato;
+        //when
+        Tomato actual = pantry.getTomatoList().get(0);
+        //then
+        Assert.assertEquals(expected, actual);
+    }
+
 
     @Test
     public void isEmptyTest(){
