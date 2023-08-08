@@ -47,6 +47,27 @@ public class FroilandaTests {
 
 
     @Test
+    public void getNameTest(){
+        Froilanda flo = new Froilanda("flo");
+        String expected = "flo";
+
+        String actual = flo.getName();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setNameTest(){
+        Froilanda flo = new Froilanda("flo");
+        String expected = "Eggo";
+
+        flo.setName(expected);
+        String actual = flo.getName();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
     public void flysTest() {
         Froilanda froilanda = new Froilanda();
         CropDuster cropduster = new CropDuster();
