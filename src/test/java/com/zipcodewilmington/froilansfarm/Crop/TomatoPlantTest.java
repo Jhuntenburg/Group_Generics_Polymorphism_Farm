@@ -13,44 +13,53 @@ public class TomatoPlantTest {
     @Test
     public void tomPInstanceOfCrop (){
 
-        TomatoPlant tom = new TomatoPlant(false);
+        TomatoPlant tom = new TomatoPlant();
         Assert.assertTrue(tom instanceof Crop);
     }
 
 
+    @Test
+    public void tomNonHarvestTest() {
+
+        TomatoPlant tPlant = new TomatoPlant();
+
+
+        Assert.assertTrue(tPlant.getTomato() == null);
+
+    }
+
+    @Test
+    public void cornHarvestHalfConditionTest() {
+
+        TomatoPlant tPlant = new TomatoPlant();
+        CropRows cropR = new CropRows();
+
+        cropR.add(tPlant);
+        tPlant.setHarvested(true);
+        tPlant.yeild();
+
+        Assert.assertFalse(tPlant.getFertStatus());
+        Assert.assertTrue(tPlant.getHarvested());
+        Assert.assertTrue(tPlant.getTomato() == null);
 
 
 
-//    @Test
-//    public void tomPlantHarvestTest(){
-//
-//        TomatoPlant tomPlant = new TomatoPlant(false);
-//        Froilan f= new Froilan();
-//        Tractor trac = new Tractor();
-//        CropRows cropR = new CropRows();
-//
-//        trac.getMounted(f);
-//        cropR.add(tomPlant);
-//        trac.harvest(cropR);
-//
-//        Assert.assertTrue(cropR.get(0).harvested);
-//
-//    }
-//    @Test
-//    public void tomPlantFertilizationTest(){
-//
-//        TomatoPlant tomPlant = new TomatoPlant();
-//        Froilanda landa= new Froilanda();
-//        CropDuster cdust = new CropDuster();
-//        CropRows cropR = new CropRows();
-//
-//
-//        cdust.getMounted(landa);
-//        cropR.add(tomPlant);
-//        cdust.fertilizer(cropR);
-//
-//
-//        Assert.assertTrue(cropR.get(0).fertilized);
-//
-//    }
+    }
+
+    @Test
+    public void cornHarvestTest() {
+
+        TomatoPlant tPlant = new TomatoPlant();
+        CropRows cropR = new CropRows();
+
+        cropR.add(tPlant);
+        tPlant.setFertilized(true);
+        tPlant.setHarvested(true);
+        tPlant.yeild();
+
+        Assert.assertTrue(tPlant.getFertStatus());
+        Assert.assertTrue(tPlant.getHarvested());
+        Assert.assertFalse(tPlant.getTomato() == null);
+    }
+
 }

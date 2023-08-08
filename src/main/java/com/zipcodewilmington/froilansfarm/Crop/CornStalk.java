@@ -16,8 +16,18 @@ public class CornStalk extends Crop{
             ec = new EarCorn();
 
         }
-
     }
 
+    public EarCorn getEarCorn() {
+        return ec;
+    }
+
+    public void setFertilized(boolean b) {
+        this.fertilized = b;
+    }
+
+    public boolean getFertStatus() {
+        return this.fertilized;
+    }
 
 }

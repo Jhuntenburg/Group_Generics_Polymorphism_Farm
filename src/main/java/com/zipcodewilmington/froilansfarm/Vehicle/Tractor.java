@@ -34,11 +34,7 @@ public class Tractor extends Vehicle implements FarmVehicle{
 
     @Override
     public void operateOnFarm(CropRows cropRows) {
-        for (Object c : cropRows) {
-            if (c instanceof Crop) {
-                ((Crop) c).setHarvested(true);
-            }
-        }
+        for (Object c : cropRows) { if (c instanceof Crop) { ((Crop) c).setHarvested(true); } }
     }
 
 
