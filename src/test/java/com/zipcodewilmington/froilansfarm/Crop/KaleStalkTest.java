@@ -22,11 +22,9 @@ public class KaleStalkTest {
     public void kaleNonHarvestTest() {
 
         CornStalk kStalk = new CornStalk();
-        Froilan f = new Froilan();
-        Tractor trac = new Tractor();
-        Froilanda fa = new Froilanda();
-        CropDuster cd = new CropDuster();
         CropRows cropR = new CropRows();
+
+        cropR.add(kStalk);
 
 
         Assert.assertTrue(kStalk.getEarCorn() == null);
@@ -36,16 +34,16 @@ public class KaleStalkTest {
     @Test
     public void cornHarvestHalfConditionTest() {
 
-        CornStalk cStalk = new CornStalk();
+        KaleStalk kStalk = new KaleStalk();
         CropRows cropR = new CropRows();
 
-        cropR.add(cStalk);
-        cStalk.setHarvested(true);
-        cStalk.yeild();
+        cropR.add(kStalk);
+        kStalk.setHarvested(true);
+        kStalk.yeild();
 
-        Assert.assertFalse(cStalk.getFertStatus());
-        Assert.assertTrue(cStalk.getHarvested());
-        Assert.assertTrue(cStalk.getEarCorn() == null);
+        Assert.assertFalse(kStalk.getFertStatus());
+        Assert.assertTrue(kStalk.getHarvested());
+        Assert.assertTrue(kStalk.getKale() == null);
 
 
 
@@ -54,17 +52,17 @@ public class KaleStalkTest {
     @Test
     public void cornHarvestTest() {
 
-        CornStalk cStalk = new CornStalk();
+        KaleStalk kStalk = new KaleStalk(false);
         CropRows cropR = new CropRows();
 
-        cropR.add(cStalk);
-        cStalk.setFertilized(true);
-        cStalk.setHarvested(true);
-        cStalk.yeild();
+        cropR.add(kStalk);
+        kStalk.setFertilized(true);
+        kStalk.setHarvested(true);
+        kStalk.yeild();
 
-        Assert.assertTrue(cStalk.getFertStatus());
-        Assert.assertTrue(cStalk.getHarvested());
-        Assert.assertFalse(cStalk.getEarCorn() == null);
+        Assert.assertTrue(kStalk.getFertStatus());
+        Assert.assertTrue(kStalk.getHarvested());
+        Assert.assertFalse(kStalk.getKale() == null);
     }
 
 }

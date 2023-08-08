@@ -49,7 +49,7 @@ public class TomatoPlantTest {
     @Test
     public void cornHarvestTest() {
 
-        TomatoPlant tPlant = new TomatoPlant();
+        TomatoPlant tPlant = new TomatoPlant(false);
         CropRows cropR = new CropRows();
 
         cropR.add(tPlant);
