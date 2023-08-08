@@ -6,6 +6,7 @@ public class TomatoPlant extends Crop {
 
     Tomato tomato;
 
+    public TomatoPlant() {}
     public TomatoPlant(boolean harvested) {
         super();
     }
@@ -17,7 +18,17 @@ public class TomatoPlant extends Crop {
         }
 
     }
+    public Tomato getTomato() {
+        return tomato;
+    }
 
+    public void setFertilized(boolean b) {
+        this.fertilized = b;
+    }
+
+    public boolean getFertStatus() {
+        return this.fertilized;
+    }
 
 
 

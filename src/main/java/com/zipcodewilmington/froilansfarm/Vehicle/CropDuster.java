@@ -39,11 +39,9 @@ public class CropDuster extends Vehicle<Froilanda> implements Rideable<Froilanda
 
     @Override
     public void operateOnFarm(CropRows cropRows) {
-        for (Object c : cropRows) {
-            if (c instanceof Crop) {
-                ((Crop) c).setFertilized(true);
-            }
-        }
+        for (Object c : cropRows) { if (c instanceof Crop) { ((Crop) c).setFertilized(true); } }
+        //cropRows.stream().filter(c -> c instanceof Crop).forEach(c -> c.setFertilized(true));
+
     }
 
 
