@@ -7,7 +7,7 @@ import com.zipcodewilmington.froilansfarm.Vehicle.CropDuster;
 
 
 public class Froilanda extends Person implements Pilot{
-    int eatenfood=0;
+    int eatenFood=0;
 
     public Froilanda(){
 
@@ -22,13 +22,6 @@ public class Froilanda extends Person implements Pilot{
         System.out.println("Look out below!");
 
         return "Look out below!";
-    }
-
-
-    public void eat(Edible edible) {
-//        Pantry.remove(edible);
-        eatenfood ++;
-
     }
 
 
@@ -50,13 +43,20 @@ public class Froilanda extends Person implements Pilot{
 
     @Override
     public void feed(Animal animal, Edible edible) {
+        animal.eat(edible);
 
     }
+
+
+
 
     @Override
     public void eat(Object o) {
+        //        Pantry.remove(edible);
+        this.eatenFood ++;
+        if (this.eatenFood >= 5){
+            this.isFed = true;
+        }
 
     }
-
-
 }

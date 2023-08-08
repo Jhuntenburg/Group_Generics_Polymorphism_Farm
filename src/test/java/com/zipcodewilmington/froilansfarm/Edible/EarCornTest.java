@@ -21,6 +21,7 @@ public class EarCornTest {
 
         //When people eat (under Eater)
         f.eat(ec);
+        ec.setEatenStatus();
 
         Assert.assertTrue(ec.gotEaten);
 

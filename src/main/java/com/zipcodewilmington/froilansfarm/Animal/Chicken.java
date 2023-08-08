@@ -7,18 +7,27 @@ import com.zipcodewilmington.froilansfarm.Crop.Produce;
 import com.zipcodewilmington.froilansfarm.Persons.Animal;
 
 public class Chicken extends Animal<Vegetable> implements Produce<Egg> {
+
+    boolean hasBeenFertilized = false;
+
     public boolean isHasBeenFertilized() {
-        return false;
+        return hasBeenFertilized;
     }
 
     public void setHasBeenFertilized(boolean b) {
+        this.hasBeenFertilized = b;
     }
 
     public String makeNoise() {
         return "Cluck";
     }
 
-    public <EdibleEgg> EdibleEgg yield() {
+    public <EdibleEgg> Egg yield() {
+
+        Egg egg = new Egg();
+        if (this.hasBeenFertilized == true) {
+            return egg;
+        }
         return null;
     }
 
@@ -34,6 +43,7 @@ public class Chicken extends Animal<Vegetable> implements Produce<Egg> {
 
     @Override
     public void eat(Edible edible) {
+        this.isFed = true;
 
     }
 }

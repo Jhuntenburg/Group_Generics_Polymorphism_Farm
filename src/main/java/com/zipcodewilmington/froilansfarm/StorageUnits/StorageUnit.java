@@ -9,7 +9,5 @@ public abstract class StorageUnit<AnyType> extends ArrayList<AnyType>{
         this.storageList = new ArrayList<AnyType>();
     }
 
-    public StorageUnit(ArrayList<AnyType> storageList) {
-        this.storageList = storageList;
-    }
+
 }
